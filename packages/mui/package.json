@@ -2,7 +2,20 @@
   "name": "@rhf-kit/mui",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "author": "Dev Youngstown",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,12 +27,14 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
     "install": "^0.13.0",
     "npm": "^10.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.51.3"
+    "react-hook-form": "^7.51.3",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.3",
