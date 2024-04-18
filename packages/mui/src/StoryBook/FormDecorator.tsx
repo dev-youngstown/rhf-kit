@@ -1,4 +1,4 @@
-import FormContainer from "@/FormContainer";
+import { FormContainer } from '@/FormContainer';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
 import { action } from "@storybook/addon-actions";
