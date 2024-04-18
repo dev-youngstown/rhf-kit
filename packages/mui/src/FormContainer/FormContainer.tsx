@@ -1,14 +1,6 @@
-
 import { PropsWithChildren } from "react";
-import { FieldValues, FormProvider, SubmitErrorHandler, SubmitHandler, UseFormProps, useForm } from "react-hook-form";
-
-export type FormContainerProps<T extends FieldValues = FieldValues> =
-  PropsWithChildren<
-    UseFormProps<T> & {
-      onSuccess?: SubmitHandler<T>;
-      onError?: SubmitErrorHandler<T>;
-    }
-  >;
+import { FieldValues, FormProvider, useForm } from "react-hook-form";
+import { FormContainerProps } from ".";
 
 const FormContainer = <TFieldValues extends FieldValues = FieldValues>({
   onSuccess,
@@ -38,4 +30,4 @@ const FormContainer = <TFieldValues extends FieldValues = FieldValues>({
   );
 };
 
-export default FormContainer;
+export { FormContainer };

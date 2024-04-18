@@ -1,13 +1,15 @@
-import FormContainer from "@/FormContainer";
-import FormPasswordElement from "@/FormPasswordElement";
 import { SubmitButton } from "@/StoryBook/SubmitButton";
+import {
+  FormContainer,
+  FormPasswordElement,
+  FormTextFieldElement,
+} from "@/index";
 import { Box } from "@mui/material";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
-import { default as FormTextFieldElement } from "..";
 
 const meta = {
-  title: "FormTextFieldElement",
+  title: "Text Field",
   component: FormTextFieldElement,
   decorators: [FormWrapper],
   parameters: {

@@ -1,26 +1,10 @@
-import FormTextFieldElement, {
-  FormTextFieldElementProps,
-} from "@/FormTextFieldElement";
+import { FormTextFieldElement } from "@/FormTextFieldElement";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { IconButton, IconButtonProps, InputAdornment } from "@mui/material";
-import {
-  MouseEvent,
-  ReactNode,
-  Ref,
-  RefAttributes,
-  forwardRef,
-  useState,
-} from "react";
+import { IconButton, InputAdornment } from "@mui/material";
+import { MouseEvent, Ref, RefAttributes, forwardRef, useState } from "react";
 import { FieldPath, FieldValues } from "react-hook-form";
-
-export type FormPasswordElementProps<
-  TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = FormTextFieldElementProps<TFieldValues, TName> & {
-  iconColor?: IconButtonProps["color"];
-  renderIcon?: (password: boolean) => ReactNode;
-};
+import { FormPasswordElementProps } from ".";
 
 type FormPasswordElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
@@ -66,7 +50,6 @@ const FormPasswordElement = forwardRef(function PasswordElement<
       type={password ? "password" : "text"}
     />
   );
-});
-FormPasswordElement.displayName = "FormPasswordElement";
+}) as FormPasswordElementComponent;
 
-export default FormPasswordElement as FormPasswordElementComponent;
+export { FormPasswordElement };

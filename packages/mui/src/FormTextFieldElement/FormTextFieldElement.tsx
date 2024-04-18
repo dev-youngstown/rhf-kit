@@ -1,27 +1,7 @@
-import { TextField, TextFieldProps, useForkRef } from "@mui/material";
+import { TextField, useForkRef } from "@mui/material";
 import { Ref, RefAttributes, forwardRef } from "react";
-import {
-  Control,
-  FieldPath,
-  FieldValues,
-  UseControllerProps,
-  useController,
-} from "react-hook-form";
-
-export type FormTextFieldElementProps<
-  TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = Omit<TextFieldProps, "name"> & {
-  name: TName;
-  rules?: UseControllerProps<TFieldValues, TName>["rules"];
-  control?: Control<TFieldValues>;
-  /**
-   * You override the MUI's TextField component by passing a reference of the component you want to use.
-   *
-   * This is especially useful when you want to use a customized version of TextField.
-   */
-  component?: typeof TextField;
-};
+import { FieldPath, FieldValues, useController } from "react-hook-form";
+import { FormTextFieldElementProps } from "./FormTextFieldElement.types";
 
 type FormTextFieldElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
@@ -78,7 +58,6 @@ const FormTextFieldElement = forwardRef(function TextFieldElement<
       inputRef={handleInputRef}
     />
   );
-});
-FormTextFieldElement.displayName = "TextFieldElement";
+}) as FormTextFieldElementComponent;
 
-export default FormTextFieldElement as FormTextFieldElementComponent;
+export { FormTextFieldElement };
