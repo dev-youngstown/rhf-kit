@@ -23,11 +23,9 @@ export type FormCheckboxGroupProps<
   /**
    * The Controller from react-hook-form using generic FieldValues.
    */
-  control?: Control<FieldValues>;
+  control?: Control<TFieldValues>;
   /**
    * The options to display.
-   *
-   * @type {CheckboxOption[]}
    */
   options: CheckboxOption[];
   /**
