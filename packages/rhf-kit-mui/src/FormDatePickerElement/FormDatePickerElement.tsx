@@ -12,6 +12,22 @@ type FormDatePickerElementComponent = <
     RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
+/**
+ * The `FormDatePickerElement` component is a wrapper around the MUI `DatePicker`.
+ * This component that serves as a layer of abstraction form any `react-hook-form` form control functions.
+ * and validation in MUI-based forms. This component simplifies the use of DatePickers within a form context,
+ * handling errors and custom validation rules transparently.
+ *
+ *
+ * ## Advanced Configuration
+ * This component accepts all the props that the MUI `DatePicker` component accepts.
+ *
+ * The component is implemented using:
+ * - [MUI DatePicker](https://mui.com/x/react-date-pickers/date-picker/)
+ * - [React Hook Form Controller](https://react-hook-form.com/docs/usecontroller)
+ *
+ * TODO: Add example usage link to Storybook docs
+ */
 const FormDatePickerElement = forwardRef(function FormDatePickerElement<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
@@ -23,7 +39,6 @@ const FormDatePickerElement = forwardRef(function FormDatePickerElement<
     name,
     control,
     required,
-    isDate,
     rules,
     inputProps,
     textReadOnly,

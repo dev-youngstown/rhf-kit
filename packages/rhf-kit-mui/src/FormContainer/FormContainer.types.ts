@@ -9,7 +9,13 @@ import {
 export type FormContainerProps<T extends FieldValues = FieldValues> =
   PropsWithChildren<
     UseFormProps<T> & {
+      /**
+       * The function to call when the form validation is successful.
+       */
       onSuccess?: SubmitHandler<T>;
+      /**
+       * The function to call when the form validation fails.
+       */
       onError?: SubmitErrorHandler<T>;
     }
   >;

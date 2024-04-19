@@ -10,8 +10,17 @@ export type FormTextFieldElementProps<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = Omit<TextFieldProps, "name"> & {
+  /**
+   * The name of the field in the form.
+   */
   name: TName;
+  /**
+   * Validation rules for the field.
+   */
   rules?: UseControllerProps<TFieldValues, TName>["rules"];
+  /**
+   * The control object from react-hook-form.
+   */
   control?: Control<TFieldValues>;
   /**
    * You override the MUI's TextField component by passing a reference of the component you want to use.

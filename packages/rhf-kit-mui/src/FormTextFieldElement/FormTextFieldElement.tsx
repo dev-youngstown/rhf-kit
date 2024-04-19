@@ -1,5 +1,5 @@
 import { TextField, useForkRef } from "@mui/material";
-import React, { Ref, RefAttributes, forwardRef } from "react";
+import { Ref, RefAttributes, forwardRef } from "react";
 import { FieldPath, FieldValues, useController } from "react-hook-form";
 import { FormTextFieldElementProps } from "./FormTextFieldElement.types";
 
@@ -27,7 +27,6 @@ type FormTextFieldElementComponent = <
  *
  * TODO: Add example usage link to Storybook docs
  */
-
 const FormTextFieldElement = forwardRef(function FormTextFieldElement<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

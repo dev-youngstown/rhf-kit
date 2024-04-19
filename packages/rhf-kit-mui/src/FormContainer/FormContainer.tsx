@@ -1,7 +1,20 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import { FieldValues, FormProvider, useForm } from "react-hook-form";
 import { FormContainerProps } from ".";
 
+/**
+ * The `FormContainer` component is that serves a wrapper for a form that uses `react-hook-form`.
+ * It provides the `FormProvider` context to all the form elements within it.
+ * It also handles the form submission and validation.
+ *
+ *
+
+ *
+ * The component is implemented using:
+ * - [React Hook Form useFormContext](https://react-hook-form.com/docs/useformcontext)
+ *
+ * TODO: Add example usage link to Storybook docs
+ */
 const FormContainer = <TFieldValues extends FieldValues = FieldValues>({
   onSuccess,
   onError,

@@ -6,7 +6,7 @@ import {
   FormHelperText,
   FormLabel,
 } from "@mui/material";
-import React, { Ref, RefAttributes, forwardRef } from "react";
+import { Ref, RefAttributes, forwardRef } from "react";
 import { FieldPath, FieldValues, useController } from "react-hook-form";
 import {
   CheckboxOption,
@@ -21,6 +21,23 @@ type FormCheckboxGroupComponent = <
     RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
+/**
+ * The `FormCheckboxGroup` component serves as a form group wrapper around the MUI `Checkbox`.
+ * This component that serves as a layer of abstraction form any `react-hook-form` form control functions.
+ * and validation in MUI-based forms. This component simplifies the use of checkbox groups within a form context,
+ * handling errors and custom validation rules transparently.
+ *
+ *
+ * ## Advanced Configuration
+ * This component accepts all the props that the MUI `Checkbox` component accepts.
+ *
+ * The component is implemented using:
+ * - [MUI Checkbox](https://mui.com/material-ui/react-checkbox/)
+ * - [MUI FormControl](https://mui.com/material-ui/api/form-control/)
+ * - [React Hook Form Controller](https://react-hook-form.com/docs/usecontroller)
+ *
+ * TODO: Add example usage link to Storybook docs
+ */
 const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

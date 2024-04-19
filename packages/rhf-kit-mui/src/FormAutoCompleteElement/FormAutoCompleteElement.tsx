@@ -5,7 +5,7 @@ import {
   TextField,
   useForkRef,
 } from "@mui/material";
-import React, { Ref, RefAttributes, forwardRef } from "react";
+import { Ref, RefAttributes, forwardRef } from "react";
 import { FieldPath, FieldValues, useController } from "react-hook-form";
 import {
   AutoDefault,
@@ -27,6 +27,26 @@ type FormAutoCompleteElementComponent = <
     RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
+/**
+ * The `FormAutoCompleteElement` component serves as a form group wrapper around the MUI `Autocomplete`.
+ * This component that serves as a layer of abstraction form any `react-hook-form` form control functions.
+ * and validation in MUI-based forms. This component simplifies the use of `Autocomplete` within a form context,
+ * handling errors and custom validation rules transparently.
+ *
+ *
+ * ## Advanced Configuration
+ * This component accepts all the props that the MUI `Autocomplete` component accepts.
+ *
+ * The component is implemented using:
+ * - [MUI Autocomplete](https://mui.com/material-ui/react-autocomplete/)
+ * - [MUI TextField](https://mui.com/material-ui/react-text-field/)
+ * - [React Hook Form Controller](https://react-hook-form.com/docs/usecontroller)
+ *
+ * example data from:
+ * - [MUI Autocomplete](https://mui.com/material-ui/react-autocomplete/)
+ *
+ * TODO: Add example usage link to Storybook docs
+ */
 const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
