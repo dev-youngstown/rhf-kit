@@ -34,7 +34,6 @@ function FormWrapper(Story) {
     >
       <Box width={"300px"}>
         <Story />
-        <br />
         <SubmitButton />
       </Box>
     </FormContainer>
