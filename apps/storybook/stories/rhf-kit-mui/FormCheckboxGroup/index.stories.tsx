@@ -3,7 +3,7 @@ import { FormCheckboxGroup } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Checkbox Group",
+  title: "Form Checkbox Group",
   component: FormCheckboxGroup,
   decorators: [FormContainerDecorator],
   parameters: {

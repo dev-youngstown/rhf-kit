@@ -9,7 +9,7 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Text Field",
+  title: "Form Text Field Element",
   component: FormTextFieldElement,
   decorators: [FormWrapper],
   parameters: {

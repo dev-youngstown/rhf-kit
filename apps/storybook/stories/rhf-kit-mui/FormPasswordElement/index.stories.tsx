@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { useFormContext } from "react-hook-form";
 
 const meta = {
-  title: "Password Text Field",
+  title: "Form Password Element",
   component: FormPasswordElement,
   decorators: [FormWrapper],
   parameters: {

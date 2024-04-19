@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Auto Complete",
+  title: "Form Auto Complete Element",
   component: FormAutoCompleteElement,
   decorators: [FormWrapper],
   parameters: {
