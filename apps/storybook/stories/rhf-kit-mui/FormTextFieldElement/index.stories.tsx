@@ -1,8 +1,10 @@
-
-
 import { SubmitButton } from "@/SubmitButton";
 import { Box } from "@mui/material";
-import { FormContainer, FormPasswordElement, FormTextFieldElement } from "@rhf-kit/mui";
+import {
+  FormContainer,
+  FormPasswordElement,
+  FormTextFieldElement,
+} from "@rhf-kit/mui";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -24,11 +26,9 @@ function FormWrapper(Story) {
   return (
     <FormContainer
       defaultValues={{
-        "default-text-field": "Test Data",
-        "default-email-field": "john@example.com",
-        "number-text-field": 6,
-        "default-first-name-field": "John",
-        "default-last-name-field": "Doe",
+        defaultFirstName: "John",
+        defaultLastName: "Doe",
+        defaultEmail: "john@doe.com",
       }}
       onSuccess={action("submit")}
     >
@@ -93,7 +93,7 @@ export const PreDefined = () => (
       fullWidth
       margin={"dense"}
       label={"First Name"}
-      name={"default-first-name-field"}
+      name={"defaultFirstName"}
     />
     <br />
     <FormTextFieldElement
@@ -101,7 +101,7 @@ export const PreDefined = () => (
       fullWidth
       margin={"dense"}
       label={"Last Name"}
-      name={"default-last-name-field"}
+      name={"defaultLastName"}
     />
     <br />
     <FormTextFieldElement
@@ -110,7 +110,7 @@ export const PreDefined = () => (
       type={"email"}
       margin={"dense"}
       label={"Email"}
-      name={"default-email-field"}
+      name={"defaultEmail"}
     />
   </>
 );
