@@ -1,0 +1,67 @@
+{
+  "name": "@rhf-kit/mui",
+  "version": "1.0.0",
+  "description": "A react-hook-form wrapper for MUI components that serves as a layer of abstraction to react-hook-form functions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-youngstown/rhf-kit.git"
+  },
+  "keywords": [
+    "react-hook-form",
+    "mui"
+  ],
+  "author": "Dev Youngstown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-youngstown/rhf-kit/issues"
+  },
+  "homepage": "https://github.com/dev-youngstown/rhf-kit#readme",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": "./src/index.js",
+    "./*/": "./src/*/index.js",
+    "./*": "./src/*"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup src/index.ts --clean --format esm,cjs --dts --external react --legacy-output --minify --sourcemap",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@mui/x-date-pickers": "^7.2.0",
+    "date-fns": "^3.6.0",
+    "install": "^0.13.0",
+    "npm": "^10.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.3",
+    "vite-tsconfig-paths": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "tsup": "^6.1.2"
+  }
+}
