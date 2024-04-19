@@ -1,17 +1,20 @@
 {
-  "name": "rhf-kit",
+  "name": "rhf-kit-monorepo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-youngstown/rhf-kit.git"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "cd packages/rhf-kit-mui && npm run build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -21,15 +24,6 @@
   "devDependencies": {
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.66",
-    "@chromatic-com/storybook": "^1.3.3",
-    "@storybook/addon-essentials": "^8.0.8",
-    "@storybook/addon-interactions": "^8.0.8",
-    "@storybook/addon-links": "^8.0.8",
-    "@storybook/addon-onboarding": "^8.0.8",
-    "@storybook/blocks": "^8.0.8",
-    "@storybook/react": "^8.0.8",
-    "@storybook/react-vite": "^8.0.8",
-    "@storybook/test": "^8.0.8",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
@@ -37,9 +31,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "eslint-plugin-storybook": "^0.8.0",
-    "storybook": "^8.0.8"
+    "typescript": "^5.2.2"
   }
 }
