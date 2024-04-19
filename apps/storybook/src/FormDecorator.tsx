@@ -14,6 +14,7 @@ export function FormContainerDecorator(Story) {
           wrong_date: "2023-13-199",
           checkboxBase: false,
           checkboxPreDetermined: true,
+          radioGroupBase: 0,
         }}
         onSuccess={action("submit")}
       >
