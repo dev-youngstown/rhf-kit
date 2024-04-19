@@ -20,19 +20,9 @@ type Story = StoryObj<typeof meta>;
 
 function FormWrapper(Story) {
   return (
-    <FormContainer
-      defaultValues={{
-        "default-text-field": "Test Data",
-        "default-email-field": "john@example.com",
-        "number-text-field": 6,
-        "default-first-name-field": "John",
-        "default-last-name-field": "Doe",
-      }}
-      onSuccess={action("submit")}
-    >
+    <FormContainer onSuccess={action("submit")}>
       <Box width={"600px"}>
         <Story />
-        <br />
         <SubmitButton />
       </Box>
     </FormContainer>
