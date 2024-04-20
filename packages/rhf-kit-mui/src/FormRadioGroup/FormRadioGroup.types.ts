@@ -1,4 +1,11 @@
 import {
+  FormControlLabelProps,
+  FormControlProps,
+  FormHelperTextProps,
+  FormLabelProps,
+  RadioProps,
+} from "@mui/material";
+import {
   Control,
   FieldPath,
   FieldValues,
@@ -28,6 +35,8 @@ export type FormRadioGroupProps<
   options: FormRadioOption[];
   /**
    * If `true`, the component is required.
+   *
+   * @default false
    */
   required?: boolean;
   /**
@@ -35,15 +44,54 @@ export type FormRadioGroupProps<
    */
   helperText?: string;
   /**
+   * If `true`, the radios will be displayed in row.
+   *
+   * @default false
+   */
+  row?: boolean;
+  /**
    * The label to display.
    */
   label?: string;
   /**
    * If `true`, the component is disabled.
+   * @default false
    */
   disabled?: boolean;
   /**
    * The rules to apply for validation.
    */
   rules?: UseControllerProps<TFieldValues, TName>["rules"];
+  /**
+   * The props to pass to the Radio component.
+   */
+  radioProps?: RadioProps;
+  /**
+   * The props to pass to the FormControl component.
+   */
+  formControlProps?: Omit<
+    FormControlProps,
+    "error" | "required" | "disabled" | "ref"
+  >;
+  /**
+   * The props to pass to the FormControlLabel component.
+   */
+  formControlLabelProps?: Omit<
+    FormControlLabelProps,
+    "key" | "value" | "control" | "label" | "onChange"
+  >;
+  /**
+   * The props to pass to the FormLabel component.
+   */
+  formLabelProps?: Omit<
+    FormLabelProps,
+    "children" | "error" | "required" | "disabled"
+  >;
+  /**
+   * The props to pass to the FormHelperText component.
+   */
+  formHelperTextProps?: Omit<
+    FormHelperTextProps,
+    "error" | "required" | "children"
+  >;
 };

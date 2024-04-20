@@ -18,6 +18,28 @@ type FormRadioGroupComponent = <
     RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
+/**
+ * The `FormRadioGroup` component serves as a form group wrapper around the MUI `RadioGroup` and.
+ * This component that serves as a layer of abstraction form any `react-hook-form` form control functions.
+ * and validation in MUI-based forms. This component simplifies the use of checkbox groups within a form context,
+ * handling errors and custom validation rules transparently.
+ *
+ * The radio group should have the most commonly used option by default.
+ *
+ *
+ * ## Advanced Configuration
+ * This component accepts all the props that the MUI `Radio`, `FormControl`, `FormLabel`, and `FormHelperText` components accepts.
+ *
+ * The component is implemented using:
+ * - [MUI Radio](https://mui.com/material-ui/api/radio/)
+ * - [MUI RadioGroup](https://mui.com/material-ui/react-radio-button/)
+ * - [MUI FormControl](https://mui.com/material-ui/api/form-control/)
+ * - [MUI FormLabel](https://mui.com/material-ui/api/form-label/)
+ * - [MUI FormHelperText](https://mui.com/material-ui/api/form-helper-text/)
+ * - [React Hook Form Controller](https://react-hook-form.com/docs/usecontroller)
+ *
+ * TODO: Add example usage link to Storybook docs
+ */
 const FormRadioGroup = forwardRef(function FormRadioGroup<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
@@ -29,11 +51,17 @@ const FormRadioGroup = forwardRef(function FormRadioGroup<
     name,
     control,
     options,
-    required,
+    required = false,
     helperText,
+    row = false,
     label,
-    disabled,
+    disabled = false,
     rules,
+    radioProps,
+    formControlProps,
+    formControlLabelProps,
+    formLabelProps,
+    formHelperTextProps,
   } = props;
 
   const {
@@ -56,20 +84,26 @@ const FormRadioGroup = forwardRef(function FormRadioGroup<
       required={required}
       disabled={field.disabled}
       ref={ref}
+      {...formControlProps}
     >
-      {label && <FormLabel>{label}</FormLabel>}
-      <RadioGroup value={field.value} onBlur={field.onBlur}>
+      {label && <FormLabel {...formLabelProps}>{label}</FormLabel>}
+      <RadioGroup value={field.value} onBlur={field.onBlur} row={row}>
         {options.map(({ label, value }) => (
           <FormControlLabel
             key={value}
             value={value}
-            control={<Radio />}
+            control={<Radio {...radioProps} />}
             label={label}
             onChange={() => field.onChange(value)}
+            {...formControlLabelProps}
           />
         ))}
       </RadioGroup>
-      {renderHelperText && <FormHelperText>{renderHelperText}</FormHelperText>}
+      {renderHelperText && (
+        <FormHelperText {...formHelperTextProps}>
+          {renderHelperText}
+        </FormHelperText>
+      )}
     </FormControl>
   );
 }) as FormRadioGroupComponent;
