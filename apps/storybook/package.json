@@ -24,14 +24,15 @@
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
     "@mui/x-date-pickers": "^7.2.0",
+    "@rhf-kit/mui": "*",
     "date-fns": "^3.6.0",
     "install": "^0.13.0",
     "npm": "^10.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.3",
-    "vite-tsconfig-paths": "^4.3.2",
-    "@rhf-kit/mui": "*"
+    "react-loader-spinner": "^6.1.6",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.3",
