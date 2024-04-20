@@ -42,6 +42,8 @@ export type FormAutoCompleteElementProps<
   disableClearable?: DisableClearable;
   /**
    * If `true`, the submission will be the `id` of the selected option.
+   *
+   * @default false
    */
   matchId?: boolean;
   /**
@@ -50,6 +52,8 @@ export type FormAutoCompleteElementProps<
   freeSolo?: FreeSolo;
   /**
    * If `true`, shows a loading indicator.
+   *
+   * @default false
    */
   loading?: boolean;
   /**
@@ -62,6 +66,8 @@ export type FormAutoCompleteElementProps<
   rules?: UseControllerProps<TFieldValues, TName>["rules"];
   /**
    * If `true`, the field is required.
+   *
+   * @default false
    */
   required?: boolean;
   /**
@@ -70,6 +76,8 @@ export type FormAutoCompleteElementProps<
   label?: TextFieldProps["label"];
   /**
    * If `true`, shows a checkbox for each option.
+   *
+   * @default false
    */
   showCheckbox?: boolean;
   /**

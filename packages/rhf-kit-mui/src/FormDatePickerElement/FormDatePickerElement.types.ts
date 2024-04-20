@@ -23,6 +23,8 @@ export type FormDatePickerElementProps<
   control?: Control<TFieldValues>;
   /**
    * If `true`, the field is required.
+   *
+   * @default false
    */
   required?: boolean;
   /**
@@ -35,6 +37,8 @@ export type FormDatePickerElementProps<
   inputProps?: TextFieldProps;
   /**
    * If `true`, the text field is read-only.
+   *
+   * @default false
    */
   textReadOnly?: boolean;
   /**

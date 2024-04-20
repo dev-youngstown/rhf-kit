@@ -34,7 +34,14 @@ const FormCheckboxElement = forwardRef(function FormCheckboxElement<
   props: FormCheckboxElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
 ): JSX.Element {
-  const { name, control, label, disabled, labelProps, checkboxProps } = props;
+  const {
+    name,
+    control,
+    label,
+    disabled = false,
+    labelProps,
+    checkboxProps,
+  } = props;
 
   const {
     field,

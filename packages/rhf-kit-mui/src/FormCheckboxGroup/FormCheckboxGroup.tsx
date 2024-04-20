@@ -48,13 +48,13 @@ const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
   const {
     name,
     control,
-    required,
+    required = false,
     label,
     rules,
-    returnObject,
+    returnObject = false,
     helperText,
-    disabled,
-    row,
+    disabled = false,
+    row = false,
     options,
     checkboxProps,
   } = props;

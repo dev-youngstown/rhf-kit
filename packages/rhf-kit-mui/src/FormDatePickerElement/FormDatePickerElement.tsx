@@ -38,10 +38,10 @@ const FormDatePickerElement = forwardRef(function FormDatePickerElement<
   const {
     name,
     control,
-    required,
+    required = false,
     rules,
     inputProps,
-    textReadOnly,
+    textReadOnly = false,
     slotProps,
     inputRef,
     ...rest

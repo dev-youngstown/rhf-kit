@@ -67,13 +67,13 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
     name,
     control,
     options,
-    loading,
-    showCheckbox,
+    loading = false,
+    showCheckbox = false,
     rules,
     loadingIndicator,
-    required,
+    required = false,
     multiple,
-    matchId,
+    matchId = false,
     label,
   } = props;
 

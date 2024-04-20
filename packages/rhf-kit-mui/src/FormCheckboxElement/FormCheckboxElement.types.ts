@@ -19,6 +19,8 @@ export type FormCheckboxElementProps<
   label?: string;
   /**
    * If `true`, the component is disabled.
+   *
+   * @default false
    */
   disabled?: boolean;
   /**

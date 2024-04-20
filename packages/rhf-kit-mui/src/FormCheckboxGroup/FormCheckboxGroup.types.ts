@@ -30,6 +30,8 @@ export type FormCheckboxGroupProps<
   options: CheckboxOption[];
   /**
    * If `true`, the component is required.
+   *
+   * @default false
    */
   required?: boolean;
   /**
@@ -42,14 +44,20 @@ export type FormCheckboxGroupProps<
   label?: string;
   /**
    * If `true`, the component will handle values as an object.
+   *
+   * @default false
    */
   returnObject?: boolean;
   /**
    * If `true`, the component will display checkboxes inline.
+   *
+   *  @default false
    */
   row?: boolean;
   /**
    * If `true`, the component is disabled.
+   *
+   * @default false
    */
   disabled?: boolean;
   /**
