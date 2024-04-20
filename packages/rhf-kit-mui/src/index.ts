@@ -4,6 +4,7 @@ export * from "./FormCheckboxGroup";
 export * from "./FormContainer";
 export * from "./FormDatePickerElement";
 export * from "./FormPasswordElement";
+export * from "./FormRadioElement";
 export * from "./FormRadioGroup";
 export * from "./FormTextFieldElement";
 
