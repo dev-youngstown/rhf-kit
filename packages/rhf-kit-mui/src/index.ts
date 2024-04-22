@@ -8,6 +8,7 @@ export * from "./FormRadioElement";
 export * from "./FormRadioGroup";
 export * from "./FormSelectElement";
 export * from "./FormSliderElement";
+export * from "./FormSwitchElement";
 export * from "./FormTextFieldElement";
 
 // button
