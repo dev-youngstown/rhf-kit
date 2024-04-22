@@ -27,6 +27,7 @@ export const Basic: Story = {
     name: "selectBase",
     label: "Select",
     options,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -36,6 +37,7 @@ export const Required: Story = {
     label: "Select",
     options,
     required: true,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -46,6 +48,7 @@ export const RequiredWithHelperText: Story = {
     options,
     required: true,
     helperText: "Select an option.",
+    sx: { minWidth: 240 },
   },
 };
 
@@ -55,6 +58,7 @@ export const Disabled: Story = {
     label: "Disabled",
     options,
     disabled: true,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -63,6 +67,7 @@ export const Placeholder: Story = {
     name: "selectPlaceholder",
     options,
     placeholder: "Select an option",
+    sx: { minWidth: 240 },
   },
 };
 
@@ -72,6 +77,7 @@ export const WithCheckboxes: Story = {
     label: "Select",
     options,
     checkboxes: true,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -81,6 +87,7 @@ export const Multiple: Story = {
     label: "Select",
     options,
     multiple: true,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -91,6 +98,7 @@ export const MultipleRequired: Story = {
     options,
     multiple: true,
     required: true,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -100,6 +108,7 @@ export const MultipleWithPlaceholder: Story = {
     options,
     multiple: true,
     placeholder: "Select option(s)",
+    sx: { minWidth: 240 },
   },
 };
 
@@ -110,6 +119,7 @@ export const MultipleWithCheckboxes: Story = {
     options,
     multiple: true,
     checkboxes: true,
+    sx: { minWidth: 240 },
   },
 };
 
@@ -120,5 +130,6 @@ export const MultipleWithChips: Story = {
     options,
     multiple: true,
     chips: true,
+    sx: { minWidth: 240 },
   },
 };

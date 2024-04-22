@@ -22,6 +22,7 @@ export const Default: Story = {
   args: {
     name: "sliderDefault",
     valueLabelDisplay: "auto",
+    sx: { width: 240 },
   },
 };
 
@@ -30,6 +31,7 @@ export const WithLabel: Story = {
     name: "sliderDefault",
     label: "Slider",
     valueLabelDisplay: "auto",
+    sx: { width: 240 },
   },
 };
 
@@ -39,6 +41,7 @@ export const WithValueInLabel: Story = {
     label: "Slider",
     valueLabelDisplay: "auto",
     valueInLabel: true,
+    sx: { width: 240 },
   },
 };
 
@@ -48,6 +51,7 @@ export const WithIcons: Story = {
     startIcon: <VolumeDownRoundedIcon />,
     endIcon: <VolumeUpRoundedIcon />,
     valueLabelDisplay: "auto",
+    sx: { width: 240 },
   },
 };
 
@@ -61,6 +65,7 @@ export const WithInput: Story = {
       min: 0,
       max: 100,
     },
+    sx: { width: 240 },
   },
 };
 
@@ -70,6 +75,7 @@ export const WithMarks: Story = {
     marks: true,
     step: 10,
     valueLabelDisplay: "auto",
+    sx: { width: 240 },
   },
 };
 
@@ -77,6 +83,7 @@ export const RangeSlider: Story = {
   args: {
     name: "sliderRange",
     valueLabelDisplay: "auto",
+    sx: { width: 240 },
   },
 };
 
@@ -86,5 +93,6 @@ export const RangeSliderWithMinDistance: Story = {
     minDistance: 10,
     valueLabelDisplay: "auto",
     disableSwap: true,
+    sx: { width: 240 },
   },
 };
