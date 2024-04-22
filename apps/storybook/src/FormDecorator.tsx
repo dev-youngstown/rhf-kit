@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
 import { FormContainer } from "@rhf-kit/mui";
@@ -18,12 +18,14 @@ export function FormContainerDecorator(Story) {
           radioGroupBase: 1,
           sliderDefault: 25,
           sliderRange: [25, 50],
+          switchDefault: false,
+          switchTrue: true,
         }}
         onSuccess={action("submit")}
       >
-        <Box minWidth={"320px"}>
+        <Container maxWidth="xs">
           <Story />
-        </Box>
+        </Container>
         <SubmitButton />
       </FormContainer>
     </LocalizationProvider>
