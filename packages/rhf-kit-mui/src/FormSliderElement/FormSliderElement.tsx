@@ -12,7 +12,7 @@ type FormSliderElementComponent<
 ) => JSX.Element;
 
 /**
- * The `FormSliderElement` component serves as a form group wrapper around the MUI `Slider`.
+ * The `FormSliderElement` component serves as a wrapper around the MUI `Slider`.
  * This component that serves as a layer of abstraction form any `react-hook-form` form control functions.
  * This component combines many of the examples from the MUI Slider documentation into a single component.
  *
