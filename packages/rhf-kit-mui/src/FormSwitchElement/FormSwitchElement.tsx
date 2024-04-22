@@ -17,6 +17,23 @@ type FormSwitchElementComponent<
     RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
+/**
+ * The `FormSwitchElement` component serves as a form wrapper around the MUI `Switch`.
+ * The value of the Switch is controlled by the `react-hook-form` `Controller` component.
+ *
+ *
+ * ## Advanced Configuration
+ * This component accepts all the props that the MUI `Switch` and `FormControlLabel` components accepts.
+ *
+ * The component is implemented using:
+ * - [MUI Switch](https://mui.com/material-ui/react-switch/)
+ * - [MUI FormControl](https://mui.com/material-ui/api/form-control/)
+ * - [MUI FormControlLabel](https://mui.com/material-ui/api/form-control-label/)
+ * - [MUI FormHelperText](https://mui.com/material-ui/api/form-helper-text/)
+ * - [React Hook Form Controller](https://react-hook-form.com/docs/usecontroller)
+ *
+ * TODO: Add example usage link to Storybook docs
+ */
 const FormSwitchElement = forwardRef(function FormSwitchElement<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
@@ -32,6 +49,9 @@ const FormSwitchElement = forwardRef(function FormSwitchElement<
     disabled,
     helperText,
     inputRef,
+    formControlProps,
+    formControlLabelProps,
+    formHelperTextProps,
     ...switchProps
   } = props;
 
@@ -57,16 +77,19 @@ const FormSwitchElement = forwardRef(function FormSwitchElement<
       required={required}
       disabled={disabled}
       ref={ref}
+      {...formControlProps}
     >
       <FormControlLabel
-        required={required}
         control={
           <Switch checked={value} onChange={onChange} {...switchProps} />
         }
         label={label}
         inputRef={handleInputRef}
+        {...formControlLabelProps}
       />
-      <FormHelperText>{renderHelperText}</FormHelperText>
+      <FormHelperText {...formHelperTextProps}>
+        {renderHelperText}
+      </FormHelperText>
     </FormControl>
   );
 }) as FormSwitchElementComponent;
