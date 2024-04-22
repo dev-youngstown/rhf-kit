@@ -24,7 +24,7 @@ export const Default: Story = {
     type: "submit",
     loading: false,
     loadingPosition: "center",
-    variant: "contained",
+    variant: "text",
     size: "medium",
   },
 };
