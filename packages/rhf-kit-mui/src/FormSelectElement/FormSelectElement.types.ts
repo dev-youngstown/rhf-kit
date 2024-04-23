@@ -34,6 +34,7 @@ export type FormSelectProps<
   | "required"
   | "children"
   | "variant"
+  | "native"
 > & {
   /**
    * The name of the input field.

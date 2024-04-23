@@ -12,5 +12,8 @@ export * from "./FormSliderElement";
 export * from "./FormSwitchElement";
 export * from "./FormTextFieldElement";
 
+// mobile inputs
+export * from "./MobileFormSelectElement";
+
 // button
 export * from "./FormButton";
