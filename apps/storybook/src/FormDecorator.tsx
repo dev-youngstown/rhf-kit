@@ -20,6 +20,8 @@ export function FormContainerDecorator(Story) {
           sliderRange: [25, 50],
           switchDefault: false,
           switchTrue: true,
+          ratingDefault: 0,
+          ratingReadOnly: 3,
         }}
         onSuccess={action("submit")}
       >
