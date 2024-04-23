@@ -22,6 +22,7 @@ export function FormContainerDecorator(Story) {
           switchTrue: true,
           ratingDefault: 0,
           ratingReadOnly: 3,
+          mobileSelectDefault: 1,
         }}
         onSuccess={action("submit")}
       >
