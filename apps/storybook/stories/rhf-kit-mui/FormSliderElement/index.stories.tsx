@@ -4,15 +4,15 @@ import VolumeUpRoundedIcon from "@mui/icons-material/VolumeUpRounded";
 import { FormSliderElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Slider Element",
+const meta: Meta<typeof FormSliderElement> = {
+  title: "React Hook Form Kit/Material UI/Form Slider Element",
   component: FormSliderElement,
   decorators: [FormContainerDecorator],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormSliderElement>;
+};
 
 export default meta;
 

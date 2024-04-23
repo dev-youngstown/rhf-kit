@@ -5,15 +5,15 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useFormContext } from "react-hook-form";
 
-const meta = {
-  title: "Form Password Element",
+const meta: Meta<typeof FormPasswordElement> = {
+  title: "React Hook Form Kit/Material UI/Form Password Element",
   component: FormPasswordElement,
   decorators: [FormWrapper],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormPasswordElement>;
+};
 
 export default meta;
 

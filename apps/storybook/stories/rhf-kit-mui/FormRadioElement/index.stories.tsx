@@ -2,15 +2,15 @@ import { FormContainerDecorator } from "@/FormDecorator";
 import { FormRadioElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Radio",
+const meta: Meta<typeof FormRadioElement> = {
+  title: "React Hook Form Kit/Material UI/Form Radio",
   component: FormRadioElement,
   decorators: [FormContainerDecorator],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormRadioElement>;
+};
 
 export default meta;
 

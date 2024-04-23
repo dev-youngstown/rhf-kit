@@ -2,15 +2,15 @@ import { FormContainerDecorator } from "@/FormDecorator";
 import { FormSwitchElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Switch Element",
+const meta: Meta<typeof FormSwitchElement> = {
+  title: "React Hook Form Kit/Material UI/Form Switch Element",
   component: FormSwitchElement,
   decorators: [FormContainerDecorator],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormSwitchElement>;
+};
 
 export default meta;
 

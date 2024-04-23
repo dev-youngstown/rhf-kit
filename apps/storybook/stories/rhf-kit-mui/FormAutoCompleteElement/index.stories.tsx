@@ -4,15 +4,15 @@ import { FormAutoCompleteElement, FormContainer } from "@rhf-kit/mui";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Auto Complete Element",
+const meta: Meta<typeof FormAutoCompleteElement> = {
+  title: "React Hook Form Kit/Material UI/Form Auto Complete Element",
   component: FormAutoCompleteElement,
   decorators: [FormWrapper],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormAutoCompleteElement>;
+};
 
 export default meta;
 

@@ -5,14 +5,14 @@ import { FormButton } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ThreeDots } from "react-loader-spinner";
 
-const meta = {
-  title: "Form Button",
+const meta: Meta<typeof FormButton> = {
+  title: "React Hook Form Kit/Material UI/Form Button",
   component: FormButton,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormButton>;
+};
 
 export default meta;
 

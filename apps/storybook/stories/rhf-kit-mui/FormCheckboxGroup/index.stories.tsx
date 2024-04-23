@@ -2,15 +2,15 @@ import { FormContainerDecorator } from "@/FormDecorator";
 import { FormCheckboxGroup } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Checkbox Group",
+const meta: Meta<typeof FormCheckboxGroup> = {
+  title: "React Hook Form Kit/Material UI/Form Checkbox Group",
   component: FormCheckboxGroup,
   decorators: [FormContainerDecorator],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormCheckboxGroup>;
+};
 
 export default meta;
 

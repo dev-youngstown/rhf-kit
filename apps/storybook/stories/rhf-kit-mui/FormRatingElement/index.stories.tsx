@@ -2,15 +2,15 @@ import { FormContainerDecorator } from "@/FormDecorator";
 import { FormRatingElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Rating Element",
+const meta: Meta<typeof FormRatingElement> = {
+  title: "React Hook Form Kit/Material UI/Form Rating Element",
   component: FormRatingElement,
   decorators: [FormContainerDecorator],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormRatingElement>;
+};
 
 export default meta;
 

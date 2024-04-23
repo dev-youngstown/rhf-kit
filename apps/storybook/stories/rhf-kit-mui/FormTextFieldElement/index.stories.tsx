@@ -8,15 +8,15 @@ import {
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Text Field Element",
+const meta: Meta<typeof FormTextFieldElement> = {
+  title: "React Hook Form Kit/Material UI/Form Text Field Element",
   component: FormTextFieldElement,
   decorators: [FormWrapper],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormTextFieldElement>;
+};
 
 export default meta;
 

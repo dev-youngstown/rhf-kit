@@ -2,15 +2,15 @@ import { FormContainerDecorator } from "@/FormDecorator";
 import { FormDatePickerElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta = {
-  title: "Form Date Picker Element",
+const meta: Meta<typeof FormDatePickerElement> = {
+  title: "React Hook Form Kit/Material UI/Form Date Picker Element",
   component: FormDatePickerElement,
   decorators: [FormContainerDecorator],
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof FormDatePickerElement>;
+};
 
 export default meta;
 
