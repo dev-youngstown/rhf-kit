@@ -10,7 +10,7 @@ export function FormContainerDecorator(Story) {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <FormContainer
         defaultValues={{
-          preset: "2023-02-01",
+          preset: new Date(),
           datetime: null,
           wrong_date: "2023-13-199",
           checkboxBase: false,
@@ -23,6 +23,7 @@ export function FormContainerDecorator(Story) {
           ratingDefault: 0,
           ratingReadOnly: 3,
           mobileSelectDefault: 1,
+          timePickerPreset: new Date(),
         }}
         onSuccess={action("submit")}
       >
