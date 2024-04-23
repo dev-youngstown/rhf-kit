@@ -1,19 +1,19 @@
 import { useForkRef } from "@mui/material";
-import { DatePicker } from "@mui/x-date-pickers";
+import { DateTimePicker } from "@mui/x-date-pickers";
 import { Ref, RefAttributes, forwardRef } from "react";
 import { FieldPath, FieldValues, useController } from "react-hook-form";
-import { FormDatePickerElementProps } from ".";
+import { FormDateTimePickerElementProps } from "./FormDateTimePickerElement.types";
 
-type FormDatePickerElementComponent = <
+type FormDateTimePickerElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >(
-  props: FormDatePickerElementProps<TFieldValues, TName> &
+  props: FormDateTimePickerElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
 /**
- * The `FormDatePickerElement` component is a wrapper around the MUI `DatePicker`.
+ * The `FormDateTimePickerElement` component is a wrapper around the MUI `DateTimePicker`.
  * This component that serves as a layer of abstraction form any `react-hook-form` form control functions.
  * and validation in MUI-based forms. This component simplifies the use of DatePickers within a form context,
  * handling errors and custom validation rules transparently.
@@ -22,21 +22,21 @@ type FormDatePickerElementComponent = <
  * ## Advanced Configuration
  * This component accepts all the props that the MUI `DatePicker` component accepts.
  *
- * On Desktops, the [MUI DesktopDatePicker](https://mui.com/x/api/date-pickers/desktop-date-picker/) is rendered automatically.
+ * On Desktops, the [MUI DesktopDateTimePicker](https://mui.com/x/api/date-pickers/desktop-date-time-picker/) is rendered automatically.
  *
- * On Mobile devices, the [MUI MobileDatePicker](https://mui.com/x/api/date-pickers/mobile-date-picker/) is rendered automatically.
+ * On Mobile devices, the [MUI MobileDateTimePicker](https://mui.com/x/api/date-pickers/mobile-date-time-picker/) is rendered automatically.
  *
  * The component is implemented using:
- * - [MUI DatePicker](https://mui.com/x/react-date-pickers/date-picker/)
+ * - [MUI DateTimePicker](https://mui.com/x/react-date-pickers/date-time-picker/)
  * - [React Hook Form Controller](https://react-hook-form.com/docs/usecontroller)
  *
  * TODO: Add example usage link to Storybook docs
  */
-const FormDatePickerElement = forwardRef(function FormDatePickerElement<
+const FormDateTimePickerElement = forwardRef(function FormDateTimePickerElement<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >(
-  props: FormDatePickerElementProps<TFieldValues, TName>,
+  props: FormDateTimePickerElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
 ): JSX.Element {
   const {
@@ -72,7 +72,7 @@ const FormDatePickerElement = forwardRef(function FormDatePickerElement<
   }
 
   return (
-    <DatePicker
+    <DateTimePicker
       {...rest}
       {...field}
       ref={ref}
@@ -108,6 +108,6 @@ const FormDatePickerElement = forwardRef(function FormDatePickerElement<
       }}
     />
   );
-}) as FormDatePickerElementComponent;
+}) as FormDateTimePickerElementComponent;
 
-export { FormDatePickerElement };
+export { FormDateTimePickerElement };
