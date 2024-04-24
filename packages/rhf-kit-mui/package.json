@@ -1,6 +1,6 @@
 {
   "name": "@rhf-kit/mui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A react-hook-form wrapper for MUI components that serves as a layer of abstraction to react-hook-form functions",
   "repository": {
     "type": "git",
