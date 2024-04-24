@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThreeDots } from "react-loader-spinner";
 
 const meta: Meta<typeof FormButton> = {
-  title: "React Hook Form Kit/Material UI/Form Button",
+  title: "@rhf-kit-mui/Form Button",
   component: FormButton,
   parameters: {
     layout: "centered",

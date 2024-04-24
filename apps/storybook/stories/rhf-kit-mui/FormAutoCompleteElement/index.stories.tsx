@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormAutoCompleteElement> = {
-  title: "React Hook Form Kit/Material UI/Form Auto Complete Element",
+  title: "@rhf-kit-mui/Form Auto Complete Element",
   component: FormAutoCompleteElement,
   decorators: [FormWrapper],
   parameters: {

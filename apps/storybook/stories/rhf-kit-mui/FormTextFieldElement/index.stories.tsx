@@ -9,7 +9,7 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormTextFieldElement> = {
-  title: "React Hook Form Kit/Material UI/Form Text Field Element",
+  title: "@rhf-kit-mui/Form Text Field Element",
   component: FormTextFieldElement,
   decorators: [FormWrapper],
   parameters: {

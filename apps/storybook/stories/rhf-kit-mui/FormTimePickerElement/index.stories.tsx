@@ -3,7 +3,7 @@ import { FormTimePickerElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormTimePickerElement> = {
-  title: "React Hook Form Kit/Material UI/Form Time Picker Element",
+  title: "@rhf-kit-mui/Form Time Picker Element",
   component: FormTimePickerElement,
   decorators: [FormContainerDecorator],
   parameters: {

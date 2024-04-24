@@ -3,7 +3,7 @@ import { FormRatingElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormRatingElement> = {
-  title: "React Hook Form Kit/Material UI/Form Rating Element",
+  title: "@rhf-kit-mui/Form Rating Element",
   component: FormRatingElement,
   decorators: [FormContainerDecorator],
   parameters: {

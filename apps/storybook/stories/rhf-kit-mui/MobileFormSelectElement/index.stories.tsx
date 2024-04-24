@@ -3,7 +3,7 @@ import { FormSelectOption, MobileFormSelectElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof MobileFormSelectElement> = {
-  title: "React Hook Form Kit/Material UI/Mobile Form Select Element",
+  title: "@rhf-kit-mui/Mobile Form Select Element",
   component: MobileFormSelectElement,
   decorators: [FormContainerDecorator],
   parameters: {

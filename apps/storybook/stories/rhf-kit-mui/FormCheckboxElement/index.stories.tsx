@@ -3,7 +3,7 @@ import { FormCheckboxElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormCheckboxElement> = {
-  title: "React Hook Form Kit/Material UI/Form Checkbox Element",
+  title: "@rhf-kit-mui/Form Checkbox Element",
   component: FormCheckboxElement,
   decorators: [FormContainerDecorator],
   parameters: {

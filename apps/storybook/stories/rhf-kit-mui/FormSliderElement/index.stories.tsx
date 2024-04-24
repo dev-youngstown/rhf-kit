@@ -5,7 +5,7 @@ import { FormSliderElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormSliderElement> = {
-  title: "React Hook Form Kit/Material UI/Form Slider Element",
+  title: "@rhf-kit-mui/Form Slider Element",
   component: FormSliderElement,
   decorators: [FormContainerDecorator],
   parameters: {

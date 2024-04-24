@@ -3,7 +3,7 @@ import { FormSwitchElement } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormSwitchElement> = {
-  title: "React Hook Form Kit/Material UI/Form Switch Element",
+  title: "@rhf-kit-mui/Form Switch Element",
   component: FormSwitchElement,
   decorators: [FormContainerDecorator],
   parameters: {

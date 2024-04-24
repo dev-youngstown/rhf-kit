@@ -3,7 +3,7 @@ import { FormRadioGroup, FormRadioOption } from "@rhf-kit/mui";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormRadioGroup> = {
-  title: "React Hook Form Kit/Material UI/Form Radio Group",
+  title: "@rhf-kit-mui/Form Radio Group",
   component: FormRadioGroup,
   decorators: [FormContainerDecorator],
   parameters: {

@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { useFormContext } from "react-hook-form";
 
 const meta: Meta<typeof FormPasswordElement> = {
-  title: "React Hook Form Kit/Material UI/Form Password Element",
+  title: "@rhf-kit-mui/Form Password Element",
   component: FormPasswordElement,
   decorators: [FormWrapper],
   parameters: {
