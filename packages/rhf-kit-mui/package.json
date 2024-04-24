@@ -32,12 +32,8 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "vite",
     "build": "tsup src/index.ts --clean --format esm,cjs --dts --external react --legacy-output --minify --sourcemap",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -52,6 +48,21 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.3",
     "vite-tsconfig-paths": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-hook-form": "^7.51.3",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@mui/x-date-pickers": "^7.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@mui/icons-material": {
+      "optional": true
+    },
+    "@mui/x-date-pickers": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
