@@ -19,10 +19,10 @@ export type FormRadioOption = {
 
 export type FormRadioGroupProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = {
   /**
-   * The name of the field.
+   * Unique name of your input.
    */
   name: TName;
   /**

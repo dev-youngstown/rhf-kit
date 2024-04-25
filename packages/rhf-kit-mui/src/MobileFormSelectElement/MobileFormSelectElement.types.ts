@@ -9,10 +9,10 @@ import { FormSelectOption } from "..";
 
 export type MobileFormSelectProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = Omit<NativeSelectProps, "value" | "onChange" | "onBlur" | "variant"> & {
   /**
-   * The name of the input field.
+   * Unique name of your input.
    */
   name: TName;
   /**

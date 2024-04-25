@@ -4,10 +4,10 @@ import { Control, FieldPath, FieldValues } from "react-hook-form";
 
 export type FormSliderElementProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = Omit<SliderProps, "name"> & {
   /**
-   * Name of the field value in the form.
+   * Unique name of your input.
    */
   name: TName;
   /**

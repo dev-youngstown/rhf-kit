@@ -19,7 +19,7 @@ export type FormSelectOption = {
 
 export type FormSelectProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = Omit<
   SelectProps,
   | "name"
@@ -37,7 +37,7 @@ export type FormSelectProps<
   | "native"
 > & {
   /**
-   * The name of the input field.
+   * Unique name of your input.
    */
   name: TName;
   /**

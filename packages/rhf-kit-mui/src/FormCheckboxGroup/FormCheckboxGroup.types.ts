@@ -14,10 +14,10 @@ export type CheckboxOption = {
 
 export type FormCheckboxGroupProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = {
   /**
-   * The name of the field.
+   * Unique name of your input.
    */
   name: TName;
   /**

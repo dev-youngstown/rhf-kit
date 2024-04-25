@@ -8,10 +8,10 @@ import {
 
 export type FormTextFieldElementProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = Omit<TextFieldProps, "name"> & {
   /**
-   * The name of the field in the form.
+   * Unique name of your input.
    */
   name: TName;
   /**

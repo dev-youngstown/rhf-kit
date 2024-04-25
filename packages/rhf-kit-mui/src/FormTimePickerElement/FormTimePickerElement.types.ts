@@ -11,10 +11,10 @@ import {
 export type FormTimePickerElementProps<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-  TDate extends never = PathValue<TFieldValues, TName>,
+  TDate extends never = PathValue<TFieldValues, TName>
 > = Omit<TimePickerProps<TDate>, "slotProps" | "value"> & {
   /**
-   * The name of the field in the form.
+   * Unique name of your input.
    */
   name: TName;
   /**

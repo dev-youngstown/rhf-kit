@@ -3,10 +3,10 @@ import { Control, FieldPath, FieldValues } from "react-hook-form";
 
 export type FormRadioElementProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = {
   /**
-   * The name of the input field.
+   * Unique name of your input.
    */
   name: TName;
   /**

@@ -8,10 +8,10 @@ import { Control, FieldPath, FieldValues } from "react-hook-form";
 
 export type FormSwitchElementProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = Omit<SwitchProps, "name"> & {
   /**
-   * Name of the field value in the form.
+   * Unique name of your input.
    */
   name: TName;
   /**
