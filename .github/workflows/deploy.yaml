@@ -28,23 +28,19 @@ jobs:
         with:
           node-version: "18.x"
       
-      - name: 'Build'
-        shell: bash
-        run: |
-          echo "::group::Build"
-          'npm ci'
-          'npm run build-storybook'
-          echo "::endgroup::"
-
-      - name: 'upload'
-          uses: actions/upload-pages-artifact@v3
-          with: 
-            path: "apps/storybook/storybook-static"
-      - id: "deploy"
-            name: Deploy to GitHub Pages
-            uses: actions/deploy-pages@v4
-            with:
-              token: ${{ github.token }}
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./apps/storybook
+        
+      - name: Build Storybook
+        run: npm run build-storybook
+        working-directory: ./apps/storybook
+  
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: apps/storybook/storybook-static # The folder the action should deploy.
 
       # #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       # - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
