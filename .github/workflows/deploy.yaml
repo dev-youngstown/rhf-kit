@@ -16,6 +16,9 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/storybook
     # Job steps
     steps:
       # Manual Checkout
@@ -29,10 +32,12 @@ jobs:
           node-version: "18.x"
       
       - name: Install dependencies
-        run: cd app/storybook npm install
+        run: npm install
+        working-directory: ./apps/storybook
         
       - name: Build Storybook
-        run: cd apps/storybook npm run build-storybook
+        run: npm run build-storybook
+        working-directory: 
   
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
