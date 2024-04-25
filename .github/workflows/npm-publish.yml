@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -26,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -33,6 +35,5 @@ jobs:
       - run: |
           cd packages/rhf-kit-mui && npm ci
           npm run semantic-release
-      - run: 
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
