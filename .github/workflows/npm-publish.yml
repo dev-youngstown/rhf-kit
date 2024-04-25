@@ -3,9 +3,7 @@
 
 name: Node.js Package
 
-on:
-  release:
-    types: [published]
+on: push
 
 jobs:
   build-rhf-kit-mui:
