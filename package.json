@@ -13,15 +13,13 @@
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "storybook": "cd apps/storybook && npm run storybook"
-
-
+    "storybook": "cd apps/storybook && npm run storybook",
+    "commit": "git-cz"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-tsconfig-paths": "^4.3.2",
-    "commit": "git-cz"
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",

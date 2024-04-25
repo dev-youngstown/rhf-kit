@@ -18,10 +18,6 @@
   },
   "homepage": "https://dev-youngstown.github.io/rhf-kit/?path=/docs/rhf-kit-mui-introduction--docs",
   "type": "module",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "publishConfig": {
     "access": "public"
   },
@@ -65,7 +61,6 @@
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
-    "cz-conventional-changelog": "^3.3.0",
     "date-fns": "^3.6.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
