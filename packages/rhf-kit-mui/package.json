@@ -39,7 +39,8 @@
     "@mui/material": "^5.15.15",
     "@mui/x-date-pickers": "^7.2.0",
     "react": "^18.2.0",
-    "react-hook-form": "^7.51.3"
+    "react-hook-form": "^7.51.3",
+    "tslib": "^2.6.2"
   },
   "peerDependenciesMeta": {
     "@mui/icons-material": {
@@ -71,7 +72,6 @@
     "semantic-release": "^23.0.8",
     "tsup": "^6.1.2",
     "typescript": "^5.2.2",
-    "tslib": "^2.6.2",
     "vite-tsconfig-paths": "^4.3.2"
   }
 }
