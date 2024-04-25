@@ -4,11 +4,6 @@
   "license": "MIT",
   "type": "module",
   "name": "rhf-kit-docs",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "source": "src/index.ts",
   "author": "Dev Youngstown",
   "scripts": {
     "dev": "vite",
