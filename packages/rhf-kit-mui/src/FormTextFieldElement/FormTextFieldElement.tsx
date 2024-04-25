@@ -52,8 +52,9 @@ const FormTextFieldElement = forwardRef(function FormTextFieldElement<
     name,
     control,
     disabled: rest.disabled,
-    rules: rules ?? {
+    rules: {
       required: required ? `${rest.label} is required` : false,
+      ...rules,
     },
   });
 
