@@ -4,7 +4,7 @@
   "description": "A react-hook-form wrapper for MUI components that serves as a layer of abstraction to react-hook-form functions",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dev-youngstown/rhf-kit.git",
+    "url": "git+https://github.com/dev-youngstown/rhf-kit.git",
     "directory": "packages/mui"
   },
   "keywords": [
@@ -38,7 +38,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "semantic-release": "semantic-release --branches main",
+    "semantic-release": "semantic-release --branches main"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5.15.15",
