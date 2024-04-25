@@ -11,7 +11,7 @@ import { MobileFormSelectProps } from "./MobileFormSelectElement.types";
 
 type MobileFormSelectElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = (
   props: MobileFormSelectProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
@@ -36,7 +36,7 @@ type MobileFormSelectElementComponent<
  */
 const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: MobileFormSelectProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
@@ -66,7 +66,6 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
       required: required ? `${label} is required` : false,
       ...rules,
     },
-    disabled,
   });
 
   const renderHelperText = error ? error.message : helperText;
