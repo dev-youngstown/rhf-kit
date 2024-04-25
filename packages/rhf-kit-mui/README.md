@@ -7,7 +7,7 @@
 [![NPM Dependents](https://flat.badgen.net/npm/dependents/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
 [![Build](https://img.shields.io/github/actions/workflow/status/dev-youngstown/rhf-kit/deploy.yaml?branch=main&style=flat-square)](https://github.com/dev-youngstown/rhf-kit/actions)
 [![Coverage](https://flat.badgen.net/codecov/c/github/dev-youngstown/rhf-kit)](https://app.codecov.io/gh/dev-youngstown/rhf-kit)
-[![Types](https://flat.badgen.net/npm/types/@rhf-kit/mui)](https://www.npmjs.com/package/@react-hookz/web)
+[![Types](https://flat.badgen.net/npm/types/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
 
 × **[DOCS](https://dev-youngstown.github.io/rhf-kit)** ×
 
