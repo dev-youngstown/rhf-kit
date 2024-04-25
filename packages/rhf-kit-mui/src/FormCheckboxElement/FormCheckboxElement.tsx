@@ -55,21 +55,23 @@ const FormCheckboxElement = forwardRef(function FormCheckboxElement<
   const handleInputRef = useForkRef(field.ref, checkboxProps?.inputRef);
 
   return (
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={field.value}
-          onChange={field.onChange}
-          disabled={field.disabled}
-          onBlur={field.onBlur}
-          inputRef={handleInputRef}
-          {...checkboxProps}
-        />
-      }
-      label={label}
-      ref={ref}
-      {...labelProps}
-    />
+    <span>
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={field.value}
+            onChange={field.onChange}
+            disabled={field.disabled}
+            onBlur={field.onBlur}
+            inputRef={handleInputRef}
+            {...checkboxProps}
+          />
+        }
+        label={label}
+        ref={ref}
+        {...labelProps}
+      />
+    </span>
   );
 }) as FormCheckboxComponent;
 
