@@ -5,7 +5,7 @@ import { FormTextFieldElementProps } from "./FormTextFieldElement.types";
 
 type FormTextFieldElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormTextFieldElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
@@ -29,7 +29,7 @@ type FormTextFieldElementComponent = <
  */
 const FormTextFieldElement = forwardRef(function FormTextFieldElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormTextFieldElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
@@ -46,7 +46,7 @@ const FormTextFieldElement = forwardRef(function FormTextFieldElement<
   } = props;
 
   const {
-    field,
+    field: { name: fieldName, value, onChange, onBlur, ref: fieldRef },
     fieldState: { error },
   } = useController({
     name,
@@ -58,15 +58,15 @@ const FormTextFieldElement = forwardRef(function FormTextFieldElement<
     },
   });
 
-  const handleInputRef = useForkRef(field.ref, inputRef);
+  const handleInputRef = useForkRef(fieldRef, inputRef);
 
   return (
     <TextFieldComponent
       {...rest}
-      name={field.name}
-      value={field.value}
-      onChange={field.onChange}
-      onBlur={field.onBlur}
+      name={fieldName}
+      value={value}
+      onChange={onChange}
+      onBlur={onBlur}
       required={required}
       type={type}
       error={!!error}
