@@ -31,12 +31,11 @@ jobs:
         with:
           node-version: "18.x"
       
-      - name: Install dependencies
-        run: npm install
+      - name: Install and Build Storybook
+        run: |
+          cd apps/storybook && npm install
+          npm run build-storybook
         
-      - name: Build Storybook
-        run: npm run build-storybook
-  
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
