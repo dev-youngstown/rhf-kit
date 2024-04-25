@@ -16,7 +16,8 @@
     "build-storybook": "cd apps/storybook && npm run build-storybook",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "cd apps/storybook && npm run storybook",
-    "build-rhf-kit/mui": "cd packages/rhf-kit/mu && npm run build"
+    "build-rhf-kit/mui": "cd packages/rhf-kit/mu && npm run build",
+    "semantic-release-rhk-kit/mui": "cd packages/rhf-kit/mui && npm run semantic-release"
   },
   "dependencies": {
     "react": "^18.2.0",
