@@ -8,6 +8,7 @@
     "url": "https://github.com/dev-youngstown/rhf-kit.git"
   },
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "scripts": {
