@@ -32,11 +32,16 @@ jobs:
         run: |
           cd apps/storybook && npm install
           npm run build-storybook
+
+      - name: 'upload'
+        uses: actions/upload-pages-artifact@v3
+        with: 
+          path: "apps/storybook/storybook-static"
         
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/deploy-pages@v4
         with:
-          folder: apps/storybook/storybook-static
+          token: ${{ github.token }}
 
       # #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       # - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
