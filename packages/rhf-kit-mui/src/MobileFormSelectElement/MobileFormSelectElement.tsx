@@ -66,6 +66,7 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
       required: required ? `${label} is required` : false,
       ...rules,
     },
+    disabled,
   });
 
   const renderHelperText = error ? error.message : helperText;
