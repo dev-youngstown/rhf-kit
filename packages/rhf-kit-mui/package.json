@@ -71,7 +71,6 @@
     "semantic-release": "^23.0.8",
     "tsup": "^6.1.2",
     "typescript": "^5.2.2",
-    "vite-tsconfig-paths": "^4.3.2",
-    "tslib": "^2.6.2"
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
