@@ -32,4 +32,5 @@ jobs:
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
           path: "apps/storybook/storybook-static"
+          checkout: "apps/storybook"
           
