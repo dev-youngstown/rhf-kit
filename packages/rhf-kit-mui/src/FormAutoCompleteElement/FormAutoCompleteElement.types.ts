@@ -18,10 +18,10 @@ export type FormAutoCompleteElementProps<
   Value = AutoDefault | string | any,
   Multiple extends boolean | undefined = boolean | undefined,
   DisableClearable extends boolean | undefined = boolean | undefined,
-  FreeSolo extends boolean | undefined = boolean | undefined,
+  FreeSolo extends boolean | undefined = boolean | undefined
 > = {
   /**
-   * The name of the field in the form.
+   * Unique name of your input.
    */
   name: TName;
   /**
