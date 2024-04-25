@@ -21,15 +21,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "source": "dist/src/index.js",
   "main": "dist/index.js",
-  "module": "dist/esm/index.js",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc --project tsconfig.json && cp package.json dist/package.json",
+    "build": "tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "semantic-release": "semantic-release --branches main"
   },
