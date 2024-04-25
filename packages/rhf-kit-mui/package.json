@@ -1,6 +1,6 @@
 {
   "name": "@rhf-kit/mui",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A react-hook-form wrapper for MUI components that serves as a layer of abstraction to react-hook-form functions",
   "repository": {
     "type": "git",
@@ -32,11 +32,15 @@
     "./*/": "./src/*/index.js",
     "./*": "./src/*"
   },
+  "files": [
+    "dist/**",
+    "src/**"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --clean --format esm,cjs --dts --external react --legacy-output --minify --sourcemap",
+    "build": "tsup ./src/index.ts --clean --format esm,cjs --dts --external react --legacy-output --minify --sourcemap",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "peerDependencies": {
