@@ -21,8 +21,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "source": "dist/src/index.js",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist/**"
   ],
