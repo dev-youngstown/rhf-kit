@@ -2,8 +2,8 @@
   "compilerOptions": {
     // THIS MUST BE AT ROOT, if you set baseurl in sub-package it breaks intellisense jump to
     "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "importHelpers": true,
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
