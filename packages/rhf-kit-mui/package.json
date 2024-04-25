@@ -33,14 +33,13 @@
     "./*": "./src/*"
   },
   "files": [
-    "dist/**",
-    "src/**"
+    "dist/**"
   ],
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "tsup ./src/index.ts --clean --format esm,cjs --dts --external react --legacy-output --minify --sourcemap",
+    "build": "tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "peerDependencies": {
