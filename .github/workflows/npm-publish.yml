@@ -35,3 +35,4 @@ jobs:
           npm run semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
