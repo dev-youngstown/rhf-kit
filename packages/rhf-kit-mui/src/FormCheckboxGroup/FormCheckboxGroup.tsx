@@ -66,8 +66,9 @@ const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
     name,
     control,
     disabled,
-    rules: rules ?? {
+    rules: {
       required: required ? `${label} is required` : false,
+      ...rules,
     },
   });
 

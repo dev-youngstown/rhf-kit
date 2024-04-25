@@ -62,8 +62,9 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
   } = useController({
     name,
     control,
-    rules: rules ?? {
+    rules: {
       required: required ? `${label} is required` : false,
+      ...rules,
     },
     disabled,
   });

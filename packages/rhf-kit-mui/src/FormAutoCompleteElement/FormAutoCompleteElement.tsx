@@ -88,8 +88,9 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
     name,
     control,
     disabled: autocompleteProps?.disabled,
-    rules: rules ?? {
+    rules: {
       required: required ? `${label} is required` : false,
+      ...rules,
     },
   });
 
