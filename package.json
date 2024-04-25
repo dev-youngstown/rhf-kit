@@ -12,16 +12,16 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build-storybook": "cd apps/storybook && npm run build-storybook",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "storybook": "cd apps/storybook && npm run storybook",
-    "build-rhf-kit/mui": "cd packages/rhf-kit/mu && npm run build",
-    "semantic-release-rhk-kit/mui": "cd packages/rhf-kit/mui && npm run semantic-release"
+    "storybook": "cd apps/storybook && npm run storybook"
+
+
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^4.3.2",
+    "commit": "git-cz"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",

@@ -39,7 +39,6 @@
     "build": "tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "semantic-release": "semantic-release --branches main",
-    "commit": "git-cz"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5.15.15",
