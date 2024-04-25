@@ -6,22 +6,7 @@ name: Node.js Package
 on: push
 
 jobs:
-  build-rhf-kit-mui:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20.8.1
-      - run: | 
-          cd packages/rhf-kit-mui && npm ci
-          npm run build
-
-     
-
   publish-rhf-kit-mui:
-    needs: build-rhf-kit-mui
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,6 +17,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: |
           cd packages/rhf-kit-mui && npm ci
+          npm run build
           npm run semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
