@@ -16,7 +16,7 @@ import { FormButtonProps } from "./FormButton.types";
  * TODO: Add example usage link to Storybook docs
  */
 const FormButton = ({
-  type,
+  type = "submit",
   loading = false,
   loadingIndicator = <CircularProgress color="inherit" size={16} />,
   loadingPosition = "center",

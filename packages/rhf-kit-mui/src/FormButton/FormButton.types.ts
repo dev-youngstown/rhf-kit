@@ -6,6 +6,7 @@ export type FormButtonProps = PropsWithChildren<
     /**
      * The type of the button element.
      *
+     * @default "submit"
      */
     type?: "submit" | "reset" | "button";
     /**
