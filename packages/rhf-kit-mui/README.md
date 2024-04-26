@@ -64,3 +64,27 @@ npm i @rhf-kit/mui
 - Mobile Inputs
 
   - [MobileFormSelectElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-mobile-form-select-element--docs) - serves as a form wrapper around the [MUI NativeSelect](https://mui.com/material-ui/api/native-select/) component.
+
+## Usage
+
+```tsx
+import { FormContainer, FormButton, FormTextFieldElement } from "@rhf-kit/mui";
+
+interface IFormData {
+  firstName: string;
+}
+
+const Example = () => {
+  const onSubmit = (data: IFormData) => console.log(data);
+  const defaultValues: IFormData = {
+    firstName: "",
+  };
+
+  return (
+    <FormContainer defaultValue={defaultValues} onSubmit={onSubmit}>
+      <FormTextFieldElement name="firstName" label="First Name" />
+      <FormButton>Submit</FormButton>
+    </FormContainer>
+  );
+};
+```
