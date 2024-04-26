@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line -->
 <p align="center">
-  <a href="https://dev-youngstown.github.io/rhf-kit" rel="noopener" target="_blank"><img width="200"  src=".github/icon.png" alt="RHF kit logo"></a>
+  <a href="https://dev-youngstown.github.io/rhf-kit" rel="noopener" target="_blank"><img width="200"  src="https://github.com/dev-youngstown/rhf-kit/blob/9fc823d876d25ea9e1581cac982b3becb7a286af/.github/icon.png" alt="RHF kit logo"></a>
 </p>
 
 <h1 align="center">React Hook Form Kit</h1>
