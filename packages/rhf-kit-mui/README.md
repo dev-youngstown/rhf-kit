@@ -1,6 +1,6 @@
 <div align="center">
 
-# ![@rhf-kit/mui](../../.github/banner.png)
+# ![@rhf-kit/mui](https://github.com/dev-youngstown/rhf-kit/blob/fa900a23713467d40ddaf92008e7a0c7a2f61bd3/.github/banner.png)
 
 [![NPM Version](https://flat.badgen.net/npm/v/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
 [![NPM Downloads](https://flat.badgen.net/npm/dm/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
