@@ -35,7 +35,7 @@ npm i @rhf-kit/mui
 
 - Form Containers
 
-  - [FormContainer]() - A container for form elements that utilizes [React Hook Form Context](https://react-hook-form.com/api#useFormContext) to manage form state.
+  - [FormContainer](https://dev-youngstown.github.io/rhf-kit/?path=/docs/rhf-kit-mui-form-container--docs) - A container for form elements that utilizes [React Hook Form Context](https://react-hook-form.com/api#useFormContext) to manage form state.
 
 - Form Buttons
 
