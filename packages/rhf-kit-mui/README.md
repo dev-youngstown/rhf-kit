@@ -5,7 +5,7 @@
 [![NPM Version](https://flat.badgen.net/npm/v/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
 [![NPM Downloads](https://flat.badgen.net/npm/dm/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
 [![NPM Dependents](https://flat.badgen.net/npm/dependents/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
-[![Build](https://img.shields.io/github/actions/workflow/status/dev-youngstown/rhf-kit/deploy.yaml?branch=main&style=flat-square)](https://github.com/dev-youngstown/rhf-kit/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/dev-youngstown/rhf-kit/npm-publish.yml?branch=main&style=flat-square)](https://github.com/dev-youngstown/rhf-kit/actions)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Types](https://flat.badgen.net/npm/types/@rhf-kit/mui)](https://www.npmjs.com/package/@rhf-kit/mui)
 
