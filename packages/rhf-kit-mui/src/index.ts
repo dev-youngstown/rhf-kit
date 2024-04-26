@@ -2,6 +2,7 @@
 export * from "./FormAutoCompleteElement";
 export * from "./FormCheckboxElement";
 export * from "./FormCheckboxGroup";
+export * from "./FormEmailElement";
 export * from "./FormPasswordElement";
 export * from "./FormRadioElement";
 export * from "./FormRadioGroup";

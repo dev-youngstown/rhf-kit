@@ -11,6 +11,10 @@
     "react-hook-form",
     "mui"
   ],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "author": "Dev Youngstown",
   "license": "MIT",
   "bugs": {
@@ -21,6 +25,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "source": "./src/index.ts",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "files": [
