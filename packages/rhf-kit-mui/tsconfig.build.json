@@ -5,8 +5,7 @@
     "rootDir": "./src",
     "noEmit": false,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "removeComments": true
   },
-  "include": ["./src/**/*.ts*"]
+  "include": ["./src/**/*"]
 }
