@@ -46,6 +46,7 @@
     }
   },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.15",
@@ -65,8 +66,6 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.3",
     "semantic-release": "^23.0.8",
-    "tsup": "^6.1.2",
-    "typescript": "^5.2.2",
-    "vite-tsconfig-paths": "^4.3.2"
+    "typescript": "^5.2.2"
   }
 }
