@@ -3,7 +3,8 @@
   "author": "Dev Youngstown",
   "version": "0.0.0-development",
   "description": "A react-hook-form wrapper for MUI components that serves as a layer of abstraction to react-hook-form functions",
-  "main": "./src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dev-youngstown/rhf-kit.git",
