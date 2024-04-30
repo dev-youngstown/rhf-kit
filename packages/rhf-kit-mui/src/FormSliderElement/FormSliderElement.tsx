@@ -5,7 +5,7 @@ import { FormSliderElementProps } from "./FormSliderElement.types";
 
 type FormSliderElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = (
   props: FormSliderElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
@@ -29,7 +29,7 @@ type FormSliderElementComponent<
  */
 const FormSliderElement = forwardRef(function FormSliderElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormSliderElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
@@ -73,7 +73,7 @@ const FormSliderElement = forwardRef(function FormSliderElement<
     }
 
     // handles the case when the user tries to move the thumb closer than the minDistance between two values
-    if (newValue[1] - newValue[0] < minDistance) {
+    if (Array.isArray(newValue) && newValue[1] - newValue[0] < minDistance) {
       if (activeThumb === 0) {
         const clamped = Math.min(newValue[0], 100 - minDistance);
         onChange([clamped, clamped + minDistance]);

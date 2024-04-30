@@ -1,7 +1,9 @@
 {
   "name": "@rhf-kit/mui",
+  "author": "Dev Youngstown",
   "version": "0.0.0-development",
   "description": "A react-hook-form wrapper for MUI components that serves as a layer of abstraction to react-hook-form functions",
+  "main": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dev-youngstown/rhf-kit.git",
@@ -11,31 +13,20 @@
     "react-hook-form",
     "mui"
   ],
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "author": "Dev Youngstown",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dev-youngstown/rhf-kit/issues"
   },
   "homepage": "https://dev-youngstown.github.io/rhf-kit/?path=/docs/rhf-kit-mui-introduction--docs",
-  "type": "module",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "dist"
   },
-  "source": "./src/index.ts",
-  "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
-  "files": [
-    "dist/**"
-  ],
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build tsconfig.build.json",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "semantic-release": "semantic-release --branches main"
   },

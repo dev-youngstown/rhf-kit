@@ -7,9 +7,6 @@
     "type": "git",
     "url": "https://github.com/dev-youngstown/rhf-kit.git"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

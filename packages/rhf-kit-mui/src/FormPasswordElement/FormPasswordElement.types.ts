@@ -1,11 +1,11 @@
-import { FormTextFieldElementProps } from "@/FormTextFieldElement";
 import { IconButtonProps } from "@mui/material";
 import { ReactNode } from "react";
 import { FieldPath, FieldValues } from "react-hook-form";
+import { FormTextFieldElementProps } from "../FormTextFieldElement";
 
 export type FormPasswordElementProps<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = FormTextFieldElementProps<TFieldValues, TName> & {
   /**
    * The color of the icon button.

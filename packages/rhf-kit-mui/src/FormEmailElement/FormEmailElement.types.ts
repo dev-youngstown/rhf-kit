@@ -1,6 +1,6 @@
-import { FormTextFieldElementProps } from "@/FormTextFieldElement";
 import { IconProps } from "@mui/material";
 import { FieldPath, FieldValues, UseControllerProps } from "react-hook-form";
+import { FormTextFieldElementProps } from "../FormTextFieldElement";
 
 export type FormEmailElementProps<
   TFieldValues extends FieldValues = FieldValues,

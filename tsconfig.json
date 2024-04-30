@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "strict": true,
+    "preserveSymlinks": true,
+    "jsx": "react-jsx",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "lib": ["dom", "esnext"],
+    "paths": {
+      "@rhf-kit/mui": ["./packages/rhf-kit-mui/src"],
+      "@rhf-kit/mui/*": ["./packages/rhf-kit-mui/src/*"]
+    },
+    "types": ["node", "react"]
+  },
+  "exclude": ["**/test", "**/dist", "**/types", "**/__tests__"],
+  "include": ["src/**/*"]
+}

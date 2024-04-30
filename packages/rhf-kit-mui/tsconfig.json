@@ -1,39 +1,4 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "baseUrl": ".",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "importHelpers": true,
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "downlevelIteration": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "preserveSymlinks": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "noEmitOnError": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveConstEnums": true,
-    "skipLibCheck": true,
-    "sourceMap": false,
-    "strictNullChecks": true,
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "types": ["node", "react"],
-    "lib": ["dom", "dom.iterable", "esnext"]
-  },
-  "exclude": ["**/test", "**/dist", "**/types", "**/__tests__"],
-  "include": ["src/**/*"],
-  "typeAcquisition": {
-    "enable": true
-  }
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*"]
 }
