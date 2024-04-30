@@ -54,7 +54,7 @@ npm i @rhf-kit/mui
   - [FormSliderElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-form-slider-element--docs) - serves as a wrapper around the [MUI Slider](https://mui.com/material-ui/react-slider/) component.
   - [FormSwitchElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-form-switch-element--docs) - serves as a form wrapper around the [MUI Switch](https://mui.com/material-ui/react-switch/) component.
   - [FormTextFieldElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-form-text-field-element--docs) - serves as a form wrapper around the [MUI TextField](https://mui.com/material-ui/react-text-field/) component.
-  - [FormEmailElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-form-email-element--docs) - serves as a form wrapper around the [FormTextFieldElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-form-email-element--docs) component with email validation.
+  - [FormEmailElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/rhf-kit-mui-form-email-element--docs) - serves as a form wrapper around the [FormTextFieldElement](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui-form-email-element--docs) component with email validation.
 
 - Date and Time Pickers
 
