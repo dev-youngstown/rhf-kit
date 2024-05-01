@@ -1,4 +1,4 @@
-import { TextField, TextFieldProps } from "@mui/material";
+import {InputBaseComponentProps, TextField, TextFieldProps} from "@mui/material";
 import {
   Control,
   FieldPath,
@@ -28,4 +28,5 @@ export type FormTextFieldElementProps<
    * This is especially useful when you want to use a customized version of TextField.
    */
   component?: typeof TextField;
+
 };

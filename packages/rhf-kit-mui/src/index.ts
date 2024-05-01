@@ -11,6 +11,7 @@ export * from "./FormSelectElement";
 export * from "./FormSliderElement";
 export * from "./FormSwitchElement";
 export * from "./FormTextFieldElement";
+export * from "./FormPhoneNumberElement"
 
 // form containers
 export * from "./FormContainer";

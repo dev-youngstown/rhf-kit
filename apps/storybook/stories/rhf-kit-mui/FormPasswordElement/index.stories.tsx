@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import { FormContainer, FormPasswordElement } from "@rhf-kit/mui";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
-import { useFormContext } from "react-hook-form";
 
 const meta: Meta<typeof FormPasswordElement> = {
   title: "@rhf-kit-mui/Form Password Element",
@@ -45,7 +44,6 @@ export const Default: Story = {
 };
 
 export const ErrorControlled = () => {
-  const { watch } = useFormContext();
   return (
     <>
       <FormPasswordElement
@@ -70,8 +68,8 @@ export const ErrorControlled = () => {
         name={"confirmPassword"}
         rules={{
           required: "Confirm Password is required",
-          validate: (value) =>
-            value === watch("password") || "Passwords do not match",
+          validate: (value, formValues) =>
+            value === formValues.password || "Passwords do not match",
         }}
       />
     </>
