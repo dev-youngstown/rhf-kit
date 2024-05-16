@@ -48,6 +48,18 @@ export const Icons = () => (
   </Stack>
 );
 
+export const Disabled = () => (
+  <Stack spacing={2}>
+    <FormButton disabled>Disabled</FormButton>
+    <FormButton disabled variant="outlined">
+      Disabled
+    </FormButton>
+    <FormButton disabled variant="contained">
+      Disabled
+    </FormButton>
+  </Stack>
+);
+
 export const Loading = () => (
   <Stack spacing={2}>
     <FormButton loading variant="outlined" loadingPosition="center">

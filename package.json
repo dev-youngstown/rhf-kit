@@ -11,7 +11,8 @@
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "cd apps/storybook && npm run storybook",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build-mui": "cd packages/rhf-kit-mui && npm run build"
   },
   "dependencies": {
     "react": "^18.2.0",

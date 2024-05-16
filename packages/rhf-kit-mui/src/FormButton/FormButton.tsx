@@ -1,5 +1,5 @@
-import { Button, CircularProgress } from "@mui/material";
-import { FormButtonProps } from "./FormButton.types";
+import {Button, CircularProgress} from "@mui/material";
+import {FormButtonProps} from "./FormButton.types";
 
 /**
  * The `FormButton` component extends the `Button` component from MUI.
@@ -24,13 +24,14 @@ const FormButton = ({
   endIcon,
   startIcon,
   size,
+  disabled,
   ...other
 }: FormButtonProps) => {
   return (
     <Button
       type={type}
       {...other}
-      disabled={loading}
+      disabled={loading || disabled}
       size={size}
       endIcon={
         loadingPosition === "end" && loading ? loadingIndicator : endIcon
