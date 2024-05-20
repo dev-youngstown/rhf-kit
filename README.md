@@ -7,4 +7,4 @@
 
 **React Hook Form Kit** is a library of packages that provide a set of components and utilities to help you build forms with [React Hook Form](https://react-hook-form.com/) and popular UI libraries:
 
-- [@rhf-kit/mui](https://dev-youngstown.github.io/rhf-kit/?path=/docs/react-hook-form-kit-material-ui) - Material-UI form components
+- [@rhf-kit/mui](https://dev-youngstown.github.io/rhf-kit/?path=/docs/rhf-kit-mui-introduction--docs) - Material-UI form components
