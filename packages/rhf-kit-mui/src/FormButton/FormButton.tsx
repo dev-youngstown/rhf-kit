@@ -13,7 +13,7 @@ import {FormButtonProps} from "./FormButton.types";
  * - [MUI Button](https://mui.com/material-ui/react-button/)
  * - [MUI CircularProgress](https://mui.com/material-ui/react-progress/)
  *
- * TODO: Add example usage link to Storybook docs
+ * Docs: https://dev-youngstown.github.io/rhf-kit/?path=/docs/rhf-kit-mui-form-button--docs
  */
 const FormButton = ({
   type = "submit",
