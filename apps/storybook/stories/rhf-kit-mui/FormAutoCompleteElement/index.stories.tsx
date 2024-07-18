@@ -160,9 +160,7 @@ export const Grouped: Story = {
     options: indexedOptions.sort(
       (a, b) => -b.firstLetter.localeCompare(a.firstLetter),
     ),
-    autocompleteProps: {
-      groupBy: (option) => option.firstLetter,
-    },
+    groupBy: (option) => option.firstLetter,
   },
 };
 
@@ -173,9 +171,8 @@ export const MultipleValues: Story = {
     name: "matchId",
     options: indexedOptions,
     multiple: true,
-    autocompleteProps: {
-      getOptionLabel: (option) => option.label,
-    },
+    getOptionLabel: (option) => option.label,
+
   },
 };
 
@@ -186,9 +183,7 @@ export const MultipleValuesRequired: Story = {
     options: indexedOptions,
     multiple: true,
     required: true,
-    autocompleteProps: {
-      getOptionLabel: (option) => option.label,
-    },
+    getOptionLabel: (option) => option.label,
   },
 };
 
@@ -199,9 +194,8 @@ export const CheckBoxes: Story = {
     options: indexedOptions,
     showCheckbox: true,
     multiple: true,
-    autocompleteProps: {
-      getOptionLabel: (option) => option.label,
-    },
+    getOptionLabel: (option) => option.label,
+
   },
 };
 
