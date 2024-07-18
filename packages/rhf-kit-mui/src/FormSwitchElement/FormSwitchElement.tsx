@@ -46,7 +46,6 @@ const FormSwitchElement = forwardRef(function FormSwitchElement<
     name,
     label,
     required,
-    disabled,
     helperText,
     inputRef,
     formControlProps,
@@ -61,7 +60,6 @@ const FormSwitchElement = forwardRef(function FormSwitchElement<
   } = useController({
     name,
     control,
-    disabled,
     rules: {
       required: required ? `${label ? label : "selection"} is required` : false,
     },
@@ -75,7 +73,6 @@ const FormSwitchElement = forwardRef(function FormSwitchElement<
     <FormControl
       error={!!error}
       required={required}
-      disabled={disabled}
       ref={ref}
       {...formControlProps}
     >

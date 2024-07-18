@@ -74,7 +74,6 @@ const FormRadioGroup = forwardRef(function FormRadioGroup<
       required: required ? `${label} is required` : false,
       ...rules,
     },
-    disabled,
   });
 
   const renderHelperText = error ? error.message : helperText;
@@ -83,7 +82,7 @@ const FormRadioGroup = forwardRef(function FormRadioGroup<
     <FormControl
       error={!!error}
       required={required}
-      disabled={field.disabled}
+      disabled={disabled}
       ref={ref}
       {...formControlProps}
     >

@@ -57,7 +57,7 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
   } = props;
 
   const {
-    field: { value, onChange, onBlur, disabled: fieldDisabled, ...field },
+    field: { value, onChange, onBlur,  ...field },
     fieldState: { error },
   } = useController({
     name,
@@ -66,7 +66,6 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
       required: required ? `${label} is required` : false,
       ...rules,
     },
-    disabled,
   });
 
   const renderHelperText = error ? error.message : helperText;
@@ -79,7 +78,7 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
       ref={ref}
       error={!!error}
       required={required}
-      disabled={fieldDisabled}
+      disabled={disabled}
       {...formControlProps}
     >
       {label && <InputLabel variant="standard">{label}</InputLabel>}

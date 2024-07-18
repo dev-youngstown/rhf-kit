@@ -61,7 +61,6 @@ const FormDateTimePickerElement = forwardRef(function FormDateTimePickerElement<
       required: required ? `${rest.label} is required` : false,
       ...rules,
     },
-    disabled: rest.disabled,
     defaultValue: null as any,
   });
 

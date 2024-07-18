@@ -38,7 +38,6 @@ const FormRatingElement = forwardRef(function FormRatingElement<
     name,
     control,
     label,
-    disabled,
     width,
     feedbackLabels,
     ...ratingProps
@@ -49,7 +48,6 @@ const FormRatingElement = forwardRef(function FormRatingElement<
   } = useController({
     name,
     control,
-    disabled,
   });
 
   return (

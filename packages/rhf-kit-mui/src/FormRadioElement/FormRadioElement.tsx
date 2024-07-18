@@ -46,7 +46,6 @@ const FormRadioElement = forwardRef(function FormRadioElement<
   const { field } = useController({
     name,
     control,
-    disabled,
   });
 
   return (
@@ -61,7 +60,7 @@ const FormRadioElement = forwardRef(function FormRadioElement<
         />
       }
       label={label}
-      disabled={field.disabled}
+      disabled={disabled}
       ref={ref}
       {...formControlLabelProps}
     />

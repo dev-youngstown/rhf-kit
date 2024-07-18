@@ -67,7 +67,6 @@ const FormSelectElement = forwardRef(function FormSelectElementComponent<
       value = multiple ? [] : "",
       onChange,
       onBlur,
-      disabled: fieldDisabled,
     },
     fieldState: { error },
   } = useController({
@@ -77,7 +76,6 @@ const FormSelectElement = forwardRef(function FormSelectElementComponent<
       required: required ? `${label} is required` : false,
       ...rules,
     },
-    disabled,
   });
 
   const renderInputValues = (
@@ -133,7 +131,7 @@ const FormSelectElement = forwardRef(function FormSelectElementComponent<
       ref={ref}
       error={!!error}
       required={required}
-      disabled={fieldDisabled}
+      disabled={disabled}
       variant={variant}
       {...formControlProps}
     >

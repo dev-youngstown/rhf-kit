@@ -65,7 +65,6 @@ const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
   } = useController({
     name,
     control,
-    disabled,
     rules: {
       required: required ? `${label} is required` : false,
       ...rules,
@@ -103,7 +102,7 @@ const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
   };
 
   return (
-    <FormControl error={!!error} required={required} ref={ref}>
+    <FormControl error={!!error} required={required} ref={ref} disabled={disabled}>
       {label && <FormLabel>{label}</FormLabel>}
       <FormGroup row={row}>
         {options.map((option) => {

@@ -65,7 +65,6 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
         multiple,
         matchId = false,
         label,
-        disabled,
         disableCloseOnSelect,
         isOptionEqualToValue,
         getOptionLabel,
@@ -85,7 +84,6 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
     } = useController({
         name,
         control,
-        disabled: disabled,
         rules: {
             required: required ? `${label} is required` : false,
             ...rules,

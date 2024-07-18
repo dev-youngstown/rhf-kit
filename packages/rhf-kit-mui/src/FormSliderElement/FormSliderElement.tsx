@@ -37,7 +37,6 @@ const FormSliderElement = forwardRef(function FormSliderElement<
   const {
     name,
     control,
-    disabled = false,
     label,
     valueInLabel = false,
     startIcon = undefined,
@@ -53,7 +52,6 @@ const FormSliderElement = forwardRef(function FormSliderElement<
   } = useController({
     name,
     control,
-    disabled,
   });
 
   const handleSliderChange = (
