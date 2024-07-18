@@ -20,7 +20,13 @@ type Story = StoryObj<typeof meta>;
 
 function FormWrapper(Story) {
   return (
-    <FormContainer onSuccess={action("submit")}>
+    <FormContainer
+      onSuccess={action("submit")}
+      defaultValues={{
+        predefined: [{ id: 1, label: "The Shawshank Redemption" }],
+        matchId: [1, 2, 3],
+      }}
+    >
       <Box width={"600px"}>
         <Story />
         <SubmitButton />
@@ -152,7 +158,7 @@ export const Grouped: Story = {
     label: "Popular Movies",
     name: "grouped",
     options: indexedOptions.sort(
-      (a, b) => -b.firstLetter.localeCompare(a.firstLetter)
+      (a, b) => -b.firstLetter.localeCompare(a.firstLetter),
     ),
     autocompleteProps: {
       groupBy: (option) => option.firstLetter,
@@ -163,7 +169,8 @@ export const Grouped: Story = {
 export const MultipleValues: Story = {
   args: {
     label: "Popular Movies",
-    name: "multiple",
+    matchId: true,
+    name: "matchId",
     options: indexedOptions,
     multiple: true,
     autocompleteProps: {
@@ -175,7 +182,7 @@ export const MultipleValues: Story = {
 export const MultipleValuesRequired: Story = {
   args: {
     label: "Popular Movies",
-    name: "multiple",
+    name: "predefined",
     options: indexedOptions,
     multiple: true,
     required: true,

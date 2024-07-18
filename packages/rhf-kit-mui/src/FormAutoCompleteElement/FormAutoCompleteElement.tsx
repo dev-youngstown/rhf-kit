@@ -1,30 +1,21 @@
-import {
-  Autocomplete,
-  Checkbox,
-  CircularProgress,
-  TextField,
-  useForkRef,
-} from "@mui/material";
-import { Ref, RefAttributes, forwardRef } from "react";
-import { FieldPath, FieldValues, useController } from "react-hook-form";
-import {
-  AutoDefault,
-  FormAutoCompleteElementProps,
-} from "./FormAutoCompleteElement.types";
+import {Autocomplete, Checkbox, CircularProgress, TextField, useForkRef,} from "@mui/material";
+import {forwardRef, Ref, RefAttributes} from "react";
+import {FieldPath, FieldValues, useController} from "react-hook-form";
+import {AutoDefault, FormAutoCompleteElementProps,} from "./FormAutoCompleteElement.types";
 
 type FormAutoCompleteElementComponent = <
-  TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+    TFieldValues extends FieldValues = FieldValues,
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >(
-  props: FormAutoCompleteElementProps<
-    TFieldValues,
-    TName,
-    AutoDefault | string | any,
-    boolean | undefined,
-    boolean | undefined,
-    boolean | undefined
-  > &
-    RefAttributes<HTMLDivElement>
+    props: FormAutoCompleteElementProps<
+        TFieldValues,
+        TName,
+        AutoDefault | string | any,
+        boolean | undefined,
+        boolean | undefined,
+        boolean | undefined
+    > &
+        RefAttributes<HTMLDivElement>
 ) => JSX.Element;
 
 /**
@@ -48,154 +39,161 @@ type FormAutoCompleteElementComponent = <
  * TODO: Add example usage link to Storybook docs
  */
 const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
-  TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+    TFieldValues extends FieldValues = FieldValues,
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >(
-  props: FormAutoCompleteElementProps<
-    TFieldValues,
-    TName,
-    AutoDefault | string | any,
-    boolean | undefined,
-    boolean | undefined,
-    boolean | undefined
-  >,
-  ref: Ref<HTMLDivElement>
+    props: FormAutoCompleteElementProps<
+        TFieldValues,
+        TName,
+        AutoDefault | string | any,
+        boolean | undefined,
+        boolean | undefined,
+        boolean | undefined
+    >,
+    ref: Ref<HTMLDivElement>
 ) {
-  const {
-    textFieldProps,
-    autocompleteProps,
-    name,
-    control,
-    options,
-    loading = false,
-    showCheckbox = false,
-    rules,
-    loadingIndicator,
-    required = false,
-    multiple,
-    matchId = false,
-    label,
-  } = props;
+    const {
+        textFieldProps,
+        name,
+        control,
+        options,
+        loading = false,
+        showCheckbox = false,
+        rules,
+        loadingIndicator,
+        required = false,
+        multiple,
+        matchId = false,
+        label,
+        disabled,
+        disableCloseOnSelect,
+        isOptionEqualToValue,
+        getOptionLabel,
+        onBlur,
+        renderOption,
+        onChange,
+        ...rest
+    } = props;
 
-  const loadingElement = loadingIndicator || (
-    <CircularProgress color="inherit" size={20} />
-  );
+    const loadingElement = loadingIndicator || (
+        <CircularProgress color="inherit" size={20}/>
+    );
 
-  const {
-    field,
-    fieldState: { error },
-  } = useController({
-    name,
-    control,
-    disabled: autocompleteProps?.disabled,
-    rules: {
-      required: required ? `${label} is required` : false,
-      ...rules,
-    },
-  });
+    const {
+        field,
+        fieldState: {error},
+    } = useController({
+        name,
+        control,
+        disabled: disabled,
+        rules: {
+            required: required ? `${label} is required` : false,
+            ...rules,
+        },
+    });
 
-  const handleInputRef = useForkRef(field.ref, textFieldProps?.inputRef);
+    const handleInputRef = useForkRef(field.ref, textFieldProps?.inputRef);
 
-  let currentValue = multiple ? field.value || [] : field.value ?? null;
+    let currentValue = multiple ? field.value || [] : field.value ?? null;
 
-  if (matchId) {
-    currentValue = multiple
-      ? (field.value || []).map((i: any) =>
-          options.find((j) => (j.id ?? j) === i)
-        )
-      : options.find((i) => (i.id ?? i) === field.value) ?? null;
-  }
-
-  return (
-    <Autocomplete
-      {...autocompleteProps}
-      value={currentValue}
-      loading={loading}
-      multiple={multiple}
-      options={options}
-      disableCloseOnSelect={
-        typeof autocompleteProps?.disableCloseOnSelect === "boolean"
-          ? autocompleteProps.disableCloseOnSelect
-          : !!multiple
-      }
-      isOptionEqualToValue={
-        autocompleteProps?.isOptionEqualToValue
-          ? autocompleteProps.isOptionEqualToValue
-          : (option, value) => {
-              return value ? option.id === (value?.id ?? value) : false;
-            }
-      }
-      getOptionLabel={
-        autocompleteProps?.getOptionLabel
-          ? autocompleteProps.getOptionLabel
-          : (option) => {
-              return `${option?.label ?? option}`;
-            }
-      }
-      onChange={(event, value, reason, details) => {
-        let changedVal = value;
-        if (matchId) {
-          changedVal = Array.isArray(value)
-            ? value.map((i: any) => i?.id ?? i)
-            : value?.id ?? value;
-        }
-        field.onChange(changedVal);
-        if (autocompleteProps?.onChange) {
-          autocompleteProps.onChange(event, value, reason, details);
-        }
-      }}
-      ref={ref}
-      renderOption={
-        autocompleteProps?.renderOption ??
-        (showCheckbox
-          ? (props, option, { selected }) => (
-              <li {...props}>
-                <Checkbox sx={{ marginRight: 1 }} checked={selected} />
-                {autocompleteProps?.getOptionLabel?.(option) ||
-                  option.label ||
-                  option}
-              </li>
+    if (matchId) {
+        currentValue = multiple
+            ? (field.value || []).map((i: any) =>
+                options.find((j) => (j.id ?? j) === i)
             )
-          : undefined)
-      }
-      onBlur={(event) => {
-        field.onBlur();
-        if (typeof autocompleteProps?.onBlur === "function") {
-          autocompleteProps.onBlur(event);
-        }
-      }}
-      renderInput={(params) => (
-        <TextField
-          name={name}
-          required={rules?.required ? true : required}
-          label={label}
-          {...textFieldProps}
-          {...params}
-          error={!!error}
-          InputLabelProps={{
-            ...params.InputLabelProps,
-            ...textFieldProps?.InputLabelProps,
-          }}
-          InputProps={{
-            ...params.InputProps,
-            endAdornment: (
-              <>
-                {loading ? loadingElement : null}
-                {params.InputProps.endAdornment}
-              </>
-            ),
-            ...textFieldProps?.InputProps,
-          }}
-          inputProps={{
-            ...params.inputProps,
-            ...textFieldProps?.inputProps,
-          }}
-          helperText={error ? error.message : textFieldProps?.helperText}
-          inputRef={handleInputRef}
+            : options.find((i) => (i.id ?? i) === field.value) ?? null;
+    }
+
+    return (
+        <Autocomplete
+            {...rest}
+            value={currentValue}
+            loading={loading}
+            multiple={multiple}
+            options={options}
+            disableCloseOnSelect={
+                typeof disableCloseOnSelect === "boolean"
+                    ? disableCloseOnSelect
+                    : !!multiple
+            }
+            isOptionEqualToValue={
+                isOptionEqualToValue
+                    ? isOptionEqualToValue
+                    : (option, value) => {
+                        return value ? option.id === (value?.id ?? value) : false;
+                    }
+            }
+            getOptionLabel={
+                getOptionLabel
+                    ? getOptionLabel
+                    : (option) => {
+                        return `${option?.label ?? option}`;
+                    }
+            }
+            onChange={(event, value, reason, details) => {
+                let changedVal = value;
+                if (matchId) {
+                    changedVal = Array.isArray(value)
+                        ? value.map((i: any) => i?.id ?? i)
+                        : value?.id ?? value;
+                }
+                field.onChange(changedVal);
+                if (onChange) {
+                    onChange(event, value, reason, details);
+                }
+            }}
+            ref={ref}
+            renderOption={
+                renderOption ??
+                (showCheckbox
+                    ? (props, option, {selected}) => (
+                        <li {...props}>
+                            <Checkbox sx={{marginRight: 1}} checked={selected}/>
+                            {getOptionLabel?.(option) ||
+                                option.label ||
+                                option}
+                        </li>
+                    )
+                    : undefined)
+            }
+            onBlur={(event) => {
+                field.onBlur();
+                if (typeof onBlur === "function") {
+                    onBlur(event);
+                }
+            }}
+            renderInput={(params) => (
+                <TextField
+                    name={name}
+                    required={rules?.required ? true : required}
+                    label={label}
+                    {...textFieldProps}
+                    {...params}
+                    error={!!error}
+                    InputLabelProps={{
+                        ...params.InputLabelProps,
+                        ...textFieldProps?.InputLabelProps,
+                    }}
+                    InputProps={{
+                        ...params.InputProps,
+                        endAdornment: (
+                            <>
+                                {loading ? loadingElement : null}
+                                {params.InputProps.endAdornment}
+                            </>
+                        ),
+                        ...textFieldProps?.InputProps,
+                    }}
+                    inputProps={{
+                        ...params.inputProps,
+                        ...textFieldProps?.inputProps,
+                    }}
+                    helperText={error ? error.message : textFieldProps?.helperText}
+                    inputRef={handleInputRef}
+                />
+            )}
         />
-      )}
-    />
-  );
+    );
 }) as FormAutoCompleteElementComponent;
 
-export { FormAutoCompleteElement };
+export {FormAutoCompleteElement};
