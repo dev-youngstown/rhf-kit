@@ -79,7 +79,7 @@ export type FormAutoCompleteElementProps<
      */
     showCheckbox?: boolean;
     /**
-     * The props for the TextField component.
+     * The props for the rendered TextField component.
      */
     textFieldProps?: Omit<TextFieldProps, "name" | "required" | "label">;
 };
