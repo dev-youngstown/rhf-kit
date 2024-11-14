@@ -15,12 +15,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^6.1.17",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
     "@mui/x-date-pickers": "^7.22.2",
-    "@rhf-kit/mui": "*",
+    "@rhf-kit/mui": "1.5.0",
     "@storybook/addons": "^7.6.17",
     "date-fns": "^3.6.0",
     "install": "^0.13.0",
