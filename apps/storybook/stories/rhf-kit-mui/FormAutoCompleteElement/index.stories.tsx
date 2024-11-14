@@ -158,7 +158,7 @@ export const Grouped: Story = {
     label: "Popular Movies",
     name: "grouped",
     options: indexedOptions.sort(
-      (a, b) => -b.firstLetter.localeCompare(a.firstLetter),
+      (a, b) => -b.firstLetter.localeCompare(a.firstLetter)
     ),
     groupBy: (option) => option.firstLetter,
   },
@@ -172,7 +172,6 @@ export const MultipleValues: Story = {
     options: indexedOptions,
     multiple: true,
     getOptionLabel: (option) => option.label,
-
   },
 };
 
@@ -195,7 +194,6 @@ export const CheckBoxes: Story = {
     showCheckbox: true,
     multiple: true,
     getOptionLabel: (option) => option.label,
-
   },
 };
 

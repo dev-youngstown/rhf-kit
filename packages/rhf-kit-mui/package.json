@@ -35,9 +35,9 @@
     "semantic-release": "semantic-release --branches main"
   },
   "peerDependencies": {
-    "@mui/icons-material": "^5.15.15",
-    "@mui/material": "^5.15.15",
-    "@mui/x-date-pickers": "^7.2.0",
+    "@mui/icons-material": "^6.1.7",
+    "@mui/material": "^6.1.7",
+    "@mui/x-date-pickers": "^7.22.2",
     "react": "^18.2.0",
     "react-hook-form": "^7.51.3"
   },
@@ -50,11 +50,11 @@
     }
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.15",
-    "@mui/material": "^5.15.15",
-    "@mui/x-date-pickers": "^7.2.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.7",
+    "@mui/material": "^6.1.7",
+    "@mui/x-date-pickers": "^7.22.2",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
