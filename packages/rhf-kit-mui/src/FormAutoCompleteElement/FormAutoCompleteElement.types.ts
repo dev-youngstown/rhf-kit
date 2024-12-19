@@ -1,4 +1,5 @@
 import { AutocompleteProps, TextFieldProps } from "@mui/material";
+import { AutocompleteRenderInputParams } from "@mui/material/Autocomplete";
 import { ReactNode } from "react";
 import {
   Control,
@@ -21,7 +22,7 @@ export type FormAutoCompleteElementProps<
   FreeSolo extends boolean | undefined = boolean | undefined,
 > = Omit<
   AutocompleteProps<Value, Multiple, DisableClearable, FreeSolo>,
-  "name" | "options" | "loading"
+  "name" | "options" | "loading" | "renderInput"
 > & {
   /**
    * Unique name of your input.
@@ -83,4 +84,8 @@ export type FormAutoCompleteElementProps<
    * @default false
    */
   showCheckbox?: boolean;
+  /**
+   * render the input.
+   */
+  renderInput?: (params: AutocompleteRenderInputParams) => ReactNode;
 };
