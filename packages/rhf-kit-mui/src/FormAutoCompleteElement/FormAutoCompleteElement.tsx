@@ -45,7 +45,6 @@ type FormAutoCompleteElementComponent = <
  * example data from:
  * - [MUI Autocomplete](https://mui.com/material-ui/react-autocomplete/)
  *
- * TODO: Add example usage link to Storybook docs
  */
 const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
   TFieldValues extends FieldValues = FieldValues,
