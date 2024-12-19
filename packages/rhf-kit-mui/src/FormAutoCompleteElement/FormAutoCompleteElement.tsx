@@ -74,12 +74,12 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
     matchId = false,
     label,
     disableCloseOnSelect,
+    renderInput,
     isOptionEqualToValue,
     getOptionLabel,
     onBlur,
     renderOption,
     onChange,
-    renderInput,
     ...rest
   } = props;
 
