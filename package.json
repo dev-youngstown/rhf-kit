@@ -15,8 +15,8 @@
     "build-mui": "cd packages/rhf-kit-mui && npm run build"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
