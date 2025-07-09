@@ -11,7 +11,7 @@ type FormEmailElementComponent = <
 >(
   props: FormEmailElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormEmailElement` component builds off of rhf-kit's `FormTextFieldElement`.
@@ -28,7 +28,7 @@ const FormEmailElement = forwardRef(function FormEmailElement<
 >(
   props: FormEmailElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     iconColor,
     renderIcon = true,

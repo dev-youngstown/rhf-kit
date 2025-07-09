@@ -5,11 +5,11 @@ import { FormRatingElementProps } from "./FormRatingElement.types";
 
 type FormRatingElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = (
   props: FormRatingElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormRatingElement` component serves as a wrapper around the MUI `Rating`.
@@ -28,20 +28,13 @@ type FormRatingElementComponent<
  */
 const FormRatingElement = forwardRef(function FormRatingElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormRatingElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const [hover, setHover] = useState<number>(-1);
-  const {
-    name,
-    control,
-    label,
-    width,
-    feedbackLabels,
-    ...ratingProps
-  } = props;
+  const { name, control, label, width, feedbackLabels, ...ratingProps } = props;
 
   const {
     field: { value, onChange, ...field },

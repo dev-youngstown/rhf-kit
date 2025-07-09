@@ -15,10 +15,10 @@ import { FormSelectProps } from "./FormSelectElement.types";
 
 type FormSelectElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = (
   props: FormSelectProps<TFieldValues, TName> & RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormSelectElement` component serves as a form group wrapper around the MUI `Select`.
@@ -39,11 +39,11 @@ type FormSelectElementComponent<
  */
 const FormSelectElement = forwardRef(function FormSelectElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormSelectProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     label,
@@ -63,11 +63,7 @@ const FormSelectElement = forwardRef(function FormSelectElementComponent<
   } = props;
 
   const {
-    field: {
-      value = multiple ? [] : "",
-      onChange,
-      onBlur,
-    },
+    field: { value = multiple ? [] : "", onChange, onBlur },
     fieldState: { error },
   } = useController({
     name,

@@ -8,11 +8,11 @@ import { FormTextFieldElement } from "../FormTextFieldElement";
 
 type FormPasswordElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormPasswordElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormPasswordElement` component builds off of rhf-kit's `FormTextFieldElement`.
@@ -25,11 +25,11 @@ type FormPasswordElementComponent = <
  */
 const FormPasswordElement = forwardRef(function PasswordElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormPasswordElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     iconColor,
     renderIcon = (password: boolean) =>

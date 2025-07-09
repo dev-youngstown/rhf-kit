@@ -6,11 +6,11 @@ import { FormDatePickerElementProps } from ".";
 
 type FormDatePickerElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormDatePickerElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormDatePickerElement` component is a wrapper around the MUI `DatePicker`.
@@ -34,11 +34,11 @@ type FormDatePickerElementComponent = <
  */
 const FormDatePickerElement = forwardRef(function FormDatePickerElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormDatePickerElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,
@@ -90,7 +90,7 @@ const FormDatePickerElement = forwardRef(function FormDatePickerElement<
         textField: {
           ...inputProps,
           required,
-          onBlur: (event) => {
+          onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
             field.onBlur();
             if (typeof inputProps?.onBlur === "function") {
               inputProps.onBlur(event);

@@ -14,7 +14,7 @@ import {
 
 type FormAutoCompleteElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormAutoCompleteElementProps<
     TFieldValues,
@@ -25,7 +25,7 @@ type FormAutoCompleteElementComponent = <
     boolean | undefined
   > &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormAutoCompleteElement` component serves as a form group wrapper around the MUI `Autocomplete`.
@@ -48,7 +48,7 @@ type FormAutoCompleteElementComponent = <
  */
 const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormAutoCompleteElementProps<
     TFieldValues,
@@ -100,14 +100,14 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
 
   const handleInputRef = useForkRef(field.ref);
 
-  let currentValue = multiple ? field.value || [] : (field.value ?? null);
+  let currentValue = multiple ? field.value || [] : field.value ?? null;
 
   if (matchId) {
     currentValue = multiple
       ? (field.value || []).map((i: any) =>
           options.find((j) => (j.id ?? j) === i)
         )
-      : (options.find((i) => (i.id ?? i) === field.value) ?? null);
+      : options.find((i) => (i.id ?? i) === field.value) ?? null;
   }
 
   return (
@@ -141,7 +141,7 @@ const FormAutoCompleteElement = forwardRef(function AutoCompleteElement<
         if (matchId) {
           changedVal = Array.isArray(value)
             ? value.map((i: any) => i?.id ?? i)
-            : (value?.id ?? value);
+            : value?.id ?? value;
         }
         field.onChange(changedVal);
         if (onChange) {

@@ -5,11 +5,11 @@ import { FormCheckboxElementProps } from "./FormCheckboxElement.types";
 
 type FormCheckboxComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormCheckboxElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormCheckboxElement` component serves as a form wrapper around the MUI `Checkbox`.
@@ -29,11 +29,11 @@ type FormCheckboxComponent = <
  */
 const FormCheckboxElement = forwardRef(function FormCheckboxElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormCheckboxElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,
