@@ -15,7 +15,7 @@ type MobileFormSelectElementComponent<
 > = (
   props: MobileFormSelectProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `MobileFormSelectElement` component serves as a form group wrapper around the MUI `NativeSelect`.
@@ -40,7 +40,7 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
 >(
   props: MobileFormSelectProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     label,
@@ -57,7 +57,7 @@ const MobileFormSelectElement = forwardRef(function MobileFormSelectComponent<
   } = props;
 
   const {
-    field: { value, onChange, onBlur,  ...field },
+    field: { value, onChange, onBlur, ...field },
     fieldState: { error },
   } = useController({
     name,

@@ -5,11 +5,11 @@ import { FormRadioElementProps } from "./FormRadioElement.types";
 
 type FormRadioElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = (
   props: FormRadioElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormRadioElement` component serves as a form wrapper around the MUI `Radio`.
@@ -28,11 +28,11 @@ type FormRadioElementComponent<
  */
 const FormRadioElement = forwardRef(function FormRadioElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormRadioElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,

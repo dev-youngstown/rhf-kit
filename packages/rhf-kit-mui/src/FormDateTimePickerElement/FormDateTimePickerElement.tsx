@@ -6,11 +6,11 @@ import { FormDateTimePickerElementProps } from "./FormDateTimePickerElement.type
 
 type FormDateTimePickerElementComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormDateTimePickerElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormDateTimePickerElement` component is a wrapper around the MUI `DateTimePicker`.
@@ -34,11 +34,11 @@ type FormDateTimePickerElementComponent = <
  */
 const FormDateTimePickerElement = forwardRef(function FormDateTimePickerElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormDateTimePickerElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,
@@ -90,7 +90,7 @@ const FormDateTimePickerElement = forwardRef(function FormDateTimePickerElement<
         textField: {
           ...inputProps,
           required,
-          onBlur: (event) => {
+          onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
             field.onBlur();
             if (typeof inputProps?.onBlur === "function") {
               inputProps.onBlur(event);

@@ -12,11 +12,11 @@ import { FormRadioGroupProps } from "./FormRadioGroup.types";
 
 type FormRadioGroupComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormRadioGroupProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormRadioGroup` component serves as a form group wrapper around the MUI `RadioGroup` and.
@@ -42,11 +42,11 @@ type FormRadioGroupComponent = <
  */
 const FormRadioGroup = forwardRef(function FormRadioGroup<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormRadioGroupProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,

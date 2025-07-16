@@ -9,7 +9,7 @@ type FormSliderElementComponent<
 > = (
   props: FormSliderElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormSliderElement` component serves as a wrapper around the MUI `Slider`.
@@ -33,7 +33,7 @@ const FormSliderElement = forwardRef(function FormSliderElement<
 >(
   props: FormSliderElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,

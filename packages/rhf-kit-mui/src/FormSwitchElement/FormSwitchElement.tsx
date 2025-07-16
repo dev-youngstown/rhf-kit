@@ -11,11 +11,11 @@ import { FormSwitchElementProps } from "./FormSwitchElement.types";
 
 type FormSwitchElementComponent<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = (
   props: FormSwitchElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormSwitchElement` component serves as a form wrapper around the MUI `Switch`.
@@ -36,11 +36,11 @@ type FormSwitchElementComponent<
  */
 const FormSwitchElement = forwardRef(function FormSwitchElement<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormSwitchElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     control,
     name,

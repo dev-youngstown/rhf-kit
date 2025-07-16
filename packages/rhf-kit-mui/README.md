@@ -26,10 +26,10 @@ npm i @rhf-kit/mui
 `@rhf-kit/mui` requires the following peer dependencies:
 
 - `react` ^18.2.0
-- `react-hook-form` ^7.51.3
-- `@mui/icons-material` ^5.15.15
-- `@mui/material` ^5.15.15
-- `@mui/x-date-pickers` ^7.2.0
+- `react-hook-form` ^7.60.0
+- `@mui/icons-material` ^7.2.0
+- `@mui/material` ^7.2.0
+- `@mui/x-date-pickers` ^8.7.0
 
 ## Components
 

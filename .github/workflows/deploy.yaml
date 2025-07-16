@@ -4,35 +4,34 @@ name: Build and Publish Storybook to GitHub Pages
 on:
   push:
     branches:
-      - "main" 
+      - "main"
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
-      
+          node-version: "22.x"
+
       - name: Install and Build Storybook
         run: |
           cd apps/storybook && npm install
           npm run build-storybook
 
-      - name: 'upload'
+      - name: "upload"
         uses: actions/upload-pages-artifact@v3
-        with: 
+        with:
           path: "apps/storybook/storybook-static"
-        
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:

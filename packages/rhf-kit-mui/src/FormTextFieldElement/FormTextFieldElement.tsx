@@ -9,7 +9,7 @@ type FormTextFieldElementComponent = <
 >(
   props: FormTextFieldElementProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormTextFieldElement` component is a wrapper around the MUI `TextField`.
@@ -33,7 +33,7 @@ const FormTextFieldElement = forwardRef(function FormTextFieldElement<
 >(
   props: FormTextFieldElementProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     type,
     required,

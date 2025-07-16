@@ -44,5 +44,5 @@ export type FormTimePickerElementProps<
   /**
    * The props to pass to the `DatePickerSlotProps`.
    */
-  slotProps?: Omit<TimePickerSlotProps<TDate, boolean>, "textField">;
+  slotProps?: Omit<TimePickerSlotProps<boolean>, "textField">;
 };

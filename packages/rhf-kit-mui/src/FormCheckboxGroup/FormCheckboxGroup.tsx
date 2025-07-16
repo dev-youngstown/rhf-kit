@@ -15,11 +15,11 @@ import {
 
 type FormCheckboxGroupComponent = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormCheckboxGroupProps<TFieldValues, TName> &
     RefAttributes<HTMLDivElement>
-) => JSX.Element;
+) => React.JSX.Element;
 
 /**
  * The `FormCheckboxGroup` component serves as a form group wrapper around the MUI `Checkbox`.
@@ -40,11 +40,11 @@ type FormCheckboxGroupComponent = <
  */
 const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >(
   props: FormCheckboxGroupProps<TFieldValues, TName>,
   ref: Ref<HTMLDivElement>
-): JSX.Element {
+): React.JSX.Element {
   const {
     name,
     control,
@@ -102,7 +102,12 @@ const FormCheckboxGroup = forwardRef(function FormCheckboxGroup<
   };
 
   return (
-    <FormControl error={!!error} required={required} ref={ref} disabled={disabled}>
+    <FormControl
+      error={!!error}
+      required={required}
+      ref={ref}
+      disabled={disabled}
+    >
       {label && <FormLabel>{label}</FormLabel>}
       <FormGroup row={row}>
         {options.map((option) => {

@@ -35,11 +35,11 @@
     "semantic-release": "semantic-release --branches main"
   },
   "peerDependencies": {
-    "@mui/icons-material": "^6.1.7",
-    "@mui/material": "^6.1.7",
-    "@mui/x-date-pickers": "^7.22.2",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@mui/x-date-pickers": "^8.7.0",
     "react": "^18.2.0",
-    "react-hook-form": "^7.51.3"
+    "react-hook-form": "^7.60.0"
   },
   "peerDependenciesMeta": {
     "@mui/icons-material": {
@@ -50,29 +50,33 @@
     }
   },
   "devDependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.7",
-    "@mui/material": "^6.1.7",
-    "@mui/x-date-pickers": "^7.22.2",
-    "@types/node": "^20.12.7",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@eslint/compat": "^1.3.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.30.1",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@mui/x-date-pickers": "^8.7.0",
+    "@types/node": "^24.0.12",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "date-fns": "^3.6.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "date-fns": "^4.1.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
     "install": "^0.13.0",
-    "npm": "^10.5.2",
+    "npm": "^11.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.51.3",
-    "semantic-release": "^23.0.8",
-    "typescript": "^5.2.2"
+    "react-hook-form": "^7.60.0",
+    "semantic-release": "^24.2.6",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "react-imask": "^7.6.0"
+    "react-imask": "^7.6.1"
   }
 }
